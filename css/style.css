@@ -212,12 +212,14 @@ a.underline-hover-effect {
 
 /*PROJECTS*/
 
-
-#projects{
+#portfolio{
   text-align: center;
-  padding-top: var(--main-padding);
-  padding-bottom: var(--main-padding);
   background-color: var(--bg-color);
+}
+
+#portfolio .heading h2{
+    color: #d2f1ff;
+}
 }
 
 /*EXPERIENCE*/
