@@ -212,6 +212,7 @@ a.underline-hover-effect {
 
 /*PROJECTS*/
 
+
 #portfolio{
   text-align: center;
   background-color: var(--bg-color);
@@ -220,6 +221,17 @@ a.underline-hover-effect {
 #portfolio .heading h2{
     color: #d2f1ff;
 }
+
+#portfolio img{
+width:100%;
+height:100%;
+filter: grayscale(100%);
+-webkit-filter: grayscale(100%);
+}
+
+#portfolio img:hover{
+    filter: none;
+    -webkit-filter: none;
 }
 
 /*EXPERIENCE*/
@@ -489,8 +501,7 @@ footer h5{
     .sidebar-logos {
       padding-top: 0px;
       width: 100px;
-      display: flex;
-      flex-direction: row;
+      display: inline-flexbox;
       justify-content: space-around;
       padding-left: 50%;
     }
@@ -510,3 +521,4 @@ footer h5{
       padding-left: unset;
     }
   }
+
