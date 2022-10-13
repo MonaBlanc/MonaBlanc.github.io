@@ -519,6 +519,7 @@ footer h5{
     .sidebar-logos {
       width: 70px;
       padding-left: unset;
+      padding: 5px;
     }
   }
 
