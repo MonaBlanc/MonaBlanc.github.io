@@ -4,7 +4,7 @@
 :root {
     --main-color: #64a8f8;
     --second-color: #d2f1ff;
-    --third-color: #fb8cff;
+    --third-color: #64ffda;
     --bg-color: #001d5b;
     --main-grid: repeat(auto-fill, minmax(300px, 1fr));
     --main-padding: 40px;
@@ -66,8 +66,8 @@ section .heading{
 #about .heading p {
     color: #fff;
 }
-span{
-    color: #fb8cff;
+#about span{
+    color: #64ffda;
 }
 
 a.underline-hover-effect {
@@ -88,7 +88,7 @@ a.underline-hover-effect {
     bottom: 0;
     width: 0;
     height: 1px;
-    background-color: #fb8cff;
+    background-color: #32da8e;
     transition: width 0.25s ease-out;
   }
   .underline-hover-effect:hover::before {
@@ -102,7 +102,6 @@ a.underline-hover-effect {
     padding-top: var(--main-padding);
     padding-bottom: var(--main-padding);
     background-color: var(--bg-color);
-    text-align: center;
 }
 
 .skills {
@@ -212,27 +211,142 @@ a.underline-hover-effect {
 
 /*PROJECTS*/
 
-
 #portfolio{
-  text-align: center;
-  background-color: var(--bg-color);
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
 }
 
 #portfolio .heading h2{
     color: #d2f1ff;
 }
 
-#portfolio img{
-width:100%;
-height:100%;
-filter: grayscale(100%);
--webkit-filter: grayscale(100%);
+#portfolio .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-#portfolio img:hover{
-    filter: none;
-    -webkit-filter: none;
-}
+
+  #portfolio .container .card {
+    /* grid-template-columns: var(--main-grid);
+    grid-gap: 30px; */
+    margin: 20px;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 20px;
+    width: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+  }
+  #portfolio .container .card h2 {
+    z-index: 99;
+    position: absolute;
+    bottom: 0px;
+    right: 130px;
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+    pointer-events: none;
+    transition: .2s ease;
+    text-shadow: 0 0 15px rgba(0, 0, 0, .5);
+  }
+  #portfolio .container .card p {
+    z-index: 99;
+    position: absolute;
+    bottom: 30px;
+    right: 130px;
+    width: 150px;
+    color: #fff;
+    opacity: 0;
+    font-size: 12px;
+    text-align: right;
+    letter-spacing: 1px;
+    transition: .2s ease;
+  }
+  #portfolio .container .card span {
+    z-index: 99;
+    position: absolute;
+    top: 60px;
+    right: 35px;
+    color: #333;
+    font-size: 12px;
+    letter-spacing: 1px;
+    writing-mode: vertical-lr;
+    transition: .2s ease;
+    opacity: .9;
+  }
+  #portfolio .container .card .pic{
+    z-index: 0;
+    width: 450px;
+    height: 200px;
+    background-size: cover;
+    border-radius: 12px;
+    filter: grayscale(100%);
+    transition: .3s ease;
+    opacity: .6;
+  }
+  #portfolio .container .card button {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--third-color);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+    opacity: 1;
+    transition: .3s ease;
+  }
+  #portfolio .container .card:hover button {
+    transform: scale(16.5);
+    opacity: .5;
+  }
+  #portfolio .container .card:hover h2 {
+    bottom: 80px;
+    right: 50px;
+    color: #fff;
+
+  }
+  #portfolio .container .card:hover p {
+    opacity: 1;
+    right: 60px;
+  }
+  #portfolio .container .card:hover span {
+    opacity: 0;
+    top: 80px;
+  }
+  #portfolio .container .card:hover .pic {
+    filter: grayscale(0);
+    width: 470px;
+  }
+  #portfolio .container .card2 .pic {
+    transition: .3s ease;
+  }
+  #portfolio .container .card2 button {
+    background-color: var(--second-color);
+  }
+
+  #portfolio .container .card3 .pic {
+    transition: .3s ease;
+  }
+  #portfolio .container .card3 button {
+    background-color: var(--main-color);
+  }
+
+  #portfolio .container .card4 .pic {
+    transition: .3s ease;
+  }
+  #portfolio .container .card4 button {
+    background-color: var(--bg-color);
+  }
 
 /*EXPERIENCE*/
 #experience{
@@ -267,7 +381,7 @@ filter: grayscale(100%);
     clear: both;
 }
 .timeline li .timeline-badge{
-    color: var(--main-color);
+    color: var(--main-color) !important;
     width: 50px;
     line-height: 50px;
     font-size: 20px;
@@ -276,7 +390,7 @@ filter: grayscale(100%);
     top: 16px;
     left: 50%;
     margin-left: -25px;
-    background-color: whitesmoke;
+    background-color: var(--bg-color);
     border-radius: 50%;
 }
 .timeline-panel-container {
@@ -323,7 +437,7 @@ filter: grayscale(100%);
 .timeline-heading h3{
     margin-top: 5px;
     font-size: 20px;
-    color: var(--third-color);
+    color: var(--main-color);
 }
 .timeline-heading h4{
     color: var(--bg-color);
@@ -342,10 +456,10 @@ filter: grayscale(100%);
     margin: 0 auto;
     text-align: center;
     padding: 30px;
+    margin-bottom: 20px;
     background: var(--bg-color);
     border-radius: 10px;
     border: 2px solid var(--third-color);
-    margin-bottom: 20px;
 }
 
 .education-block:hover{
@@ -363,6 +477,11 @@ filter: grayscale(100%);
 
 .education-block:hover h3, .education-block:hover p{
     color: var(--bg-color);
+    transition: 1s;
+}
+
+.education-block:hover h5{
+    color: var(--main-color);
     transition: 1s;
 }
 
@@ -464,7 +583,7 @@ footer h5{
         bottom: 0;
         width: 0;
         height: 1px;
-        background-color: #fb8cff;
+        background-color: #64ffda;
         transition: width 0.25s ease-out;
       }
       .underline-hover-effect:hover::before {
@@ -586,4 +705,124 @@ footer h5{
     height: 45vh;
   }
 
+ /* Certifications */
+ #certifications{
+    text-align: center;
+    background-color: var(--bg-color);
+    
+  } 
 
+  #certifications ul {
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    list-style-type: none;
+  }
+  
+  #certifications ul li {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 200px;
+    height: 200px;
+  }
+  
+  #certifications li .base {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 8px solid var(--color);
+    border-left: 8px solid transparent;
+    animation: spin 8s linear infinite;
+    filter: drop-shadow(0 0 10px var(--color));
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotateX(60deg) rotateZ(0);
+    }
+    100% {
+      transform: rotateX(60deg) rotateZ(-360deg);
+    }
+  }
+  
+  #certifications li .base::after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    top: 9px;
+    left: 9px;
+    border-radius: 50%;
+    background-color: var(--color);
+  }
+  
+  #certifications li .base,
+  li .title,
+  li .icon,
+  li .details {
+    position: absolute;
+    color: #b5b5b5;
+    transform: rotateX(60deg) rotateZ(-25deg);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+  }
+  
+  #certifications li .title {
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transform: rotateY(10deg) skewY(-12deg) translateY(-100px);
+    opacity: 1;
+    pointer-events: none;
+  }
+  
+  #certifications li .icon {
+    display: grid;
+    place-items: center;
+    font-size: 80px;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  .base:hover ~ .title {
+    transform: rotateY(10deg) skewY(-12deg) translateY(-160px);
+    color: var(--color);
+    filter: drop-shadow(0 0 3px var(--color));
+    animation: wave 1s ease-in-out infinite;
+  }
+
+  @keyframes wave {
+    0%,
+    100% {
+      margin-bottom: 0;
+    }
+    50% {
+      margin-bottom: 15px;
+    }
+  }
+  
+  .base:hover {
+    filter: drop-shadow(0 0 10px var(--color));
+    animation-play-state: paused;
+  }
+  
+  .base:hover + .title + .icon {
+    transform: rotateY(10deg) skewY(-12deg) translateY(-160px);
+    color: var(--color);
+    filter: drop-shadow(0 0 2px var(--color));
+    animation: wave 1s ease-in-out infinite;
+  }
+  
+  .base:hover + .title {
+    color: var(--color);
+    transform: rotateY(10deg) skewY(-12deg) translateY(-90px);
+    text-shadow: 0 0 1px var(--color);
+    transition-delay: 0.1s;
+    animation: wave 1s ease-in-out infinite;
+  }
+  
