@@ -72,7 +72,7 @@ section .heading{
 
 a.underline-hover-effect {
     text-decoration: none;
-    color: inherit;
+    color: var(--third-color);
   }
   
   .underline-hover-effect {
@@ -121,7 +121,7 @@ a.underline-hover-effect {
 }
 
 .skills h2 {
-    font-size: 35px;
+    font-size: 45px;
     color: white;
     padding-bottom: 20px;
 }
@@ -218,7 +218,9 @@ a.underline-hover-effect {
 }
 
 #portfolio .heading h2{
-    color: #d2f1ff;
+  font-size: 45px;
+  color: white;
+  padding-bottom: 20px;    
 }
 
 #portfolio .container {
@@ -275,124 +277,14 @@ a.underline-hover-effect {
   margin-right: 0
 }
 
-  /* #portfolio .container .card {
-    margin: 20px;
-    background-color: #fff;
-    overflow: hidden;
-    border-radius: 20px;
-    width: 50%;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .3);
-  }
-  #portfolio .container .card h2 {
-    z-index: 99;
-    position: absolute;
-    bottom: 0px;
-    right: 130px;
-    font-size: 50px;
-    font-weight: 700;
-    color: #fff;
-    pointer-events: none;
-    transition: .2s ease;
-    text-shadow: 0 0 15px rgba(0, 0, 0, .5);
-  }
-  #portfolio .container .card p {
-    z-index: 99;
-    position: absolute;
-    bottom: 30px;
-    right: 130px;
-    width: 150px;
-    color: #fff;
-    opacity: 0;
-    font-size: 12px;
-    text-align: right;
-    letter-spacing: 1px;
-    transition: .2s ease;
-  }
-  #portfolio .container .card span {
-    z-index: 99;
-    position: absolute;
-    top: 60px;
-    right: 35px;
-    color: #333;
-    font-size: 12px;
-    letter-spacing: 1px;
-    writing-mode: vertical-lr;
-    transition: .2s ease;
-    opacity: .9;
-  }
-  #portfolio .container .card .pic{
-    z-index: 0;
-    width: 450px;
-    height: 200px;
-    background-size: cover;
-    border-radius: 12px;
-    filter: grayscale(100%);
-    transition: .3s ease;
-    opacity: .6;
-  }
-  #portfolio .container .card button {
-    position: absolute;
-    right: 30px;
-    bottom: 30px;
-    width: 30px;
-    height: 30px;
-    background-color: var(--third-color);
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    outline: none;
-    opacity: 1;
-    transition: .3s ease;
-  }
-  #portfolio .container .card:hover button {
-    transform: scale(16.5);
-    opacity: .5;
-  }
-  #portfolio .container .card:hover h2 {
-    bottom: 80px;
-    right: 50px;
-    color: #fff;
-
-  }
-  #portfolio .container .card:hover p {
-    opacity: 1;
-    right: 60px;
-  }
-  #portfolio .container .card:hover span {
-    opacity: 0;
-    top: 80px;
-  }
-  #portfolio .container .card:hover .pic {
-    filter: grayscale(0);
-    width: 470px;
-  }
-  #portfolio .container .card2 .pic {
-    transition: .3s ease;
-  }
-  #portfolio .container .card2 button {
-    background-color: var(--second-color);
-  }
-
-  #portfolio .container .card3 .pic {
-    transition: .3s ease;
-  }
-  #portfolio .container .card3 button {
-    background-color: var(--main-color);
-  }
-
-  #portfolio .container .card4 .pic {
-    transition: .3s ease;
-  }
-  #portfolio .container .card4 button {
-    background-color: var(--bg-color);
-  } */
-
 /*EXPERIENCE*/
 #experience{
     background-color: var(--bg-color);    
 }
 #experience .heading h2{
-    color: #d2f1ff;
+  font-size: 45px;
+  color: white;
+  padding-bottom: 20px;
 }
 .timeline {
     padding: 30px 10px;
@@ -487,6 +379,12 @@ a.underline-hover-effect {
 
 #education{
     background: var(--bg-color);
+}
+
+#education .heading h2{
+  font-size: 45px;
+  color: white;
+  padding-bottom: 20px;
 }
 
 
@@ -748,8 +646,13 @@ footer h5{
  #certifications{
     text-align: center;
     background-color: var(--bg-color);
-    
   } 
+
+  #certifications h2 {
+    color: white;
+    font-size: 45px;
+    padding-bottom: 20px;
+  }
 
   #certifications ul {
     padding-top: 100px;
