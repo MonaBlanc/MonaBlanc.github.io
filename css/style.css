@@ -224,19 +224,58 @@ a.underline-hover-effect {
 #portfolio .container {
     padding-left: 15px;
     padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
+    position: relative;
+    height: 100%;
 }
 
+.swiper {
+  width: 60%;
+  height: auto;
+  padding: 50px;
+}
 
-  #portfolio .container .card {
-    /* grid-template-columns: var(--main-grid);
-    grid-gap: 30px; */
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 600px;
+  height: 600px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide img {
+  display: block;
+  aspect-ratio: 4/3;
+  width: 100%;
+  padding-bottom: 15px;
+  
+}
+
+.swiper h2 {
+
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.swiper .tag {
+  display: inline-block;
+  border-radius: 3px;
+  padding: .2em .5em .3em;
+  border-radius: 5px;
+  background: var(--third-color);
+  color: var(--bg-color);
+  font-weight: 600;
+  margin: .25em .1em
+}
+
+.swiper h1.tag {
+  margin-left: 0;
+  margin-right: 0
+}
+
+  /* #portfolio .container .card {
     margin: 20px;
     background-color: #fff;
     overflow: hidden;
@@ -346,7 +385,7 @@ a.underline-hover-effect {
   }
   #portfolio .container .card4 button {
     background-color: var(--bg-color);
-  }
+  } */
 
 /*EXPERIENCE*/
 #experience{

@@ -1,139 +1,213 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>kimberley</title>
-        <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    </head>
-    <body>
-        <section class="container-fluid" id="about">
-            <div class="col-8 col-lg-4 avatar">
-                <img src="images/sweat.png" >
-            </div>
-            <div class="heading">
-                <h1>hi, i'm <span class="auto-type"></span></h1>
-                <h3>Serious Game Developper Apprentice</h3>
-                <p>I'm a 21 years old student at 
-                    <a class="underline-hover-effect" href="https://polytech-nancy.univ-lorraine.fr/">
+
+<head>
+    <title>kimberley</title>
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    
+</head>
+
+<body>
+    <section class="container-fluid" id="about">
+        <div class="col-8 col-lg-4 avatar">
+            <img src="images/sweat.png">
+        </div>
+        <div class="heading">
+            <h1>hi, i'm <span class="auto-type"></span></h1>
+            <h3>Serious Game Developper Apprentice</h3>
+            <p>I'm a 21 years old student at
+                <a class="underline-hover-effect" href="https://polytech-nancy.univ-lorraine.fr/">
                     Polytech Nancy</a>
                 , an engineering school based in France. <br>
                 I study Computer Science and Robotics there in an apprenticeship formation. I had<br>
                 the pleasure to join
-                    <a class="underline-hover-effect" href="https://www.faurecia.com/">
+                <a class="underline-hover-effect" href="https://www.faurecia.com/">
                     Faurecia</a>
-                as a serious game developper during my formation.</p>
-                <a href="mailto:jacquemotkimberley@gmail.com" class="btn btn-outline-light">Contact me</a>
+                as a serious game developper during my formation.
+            </p>
+            <a href="mailto:jacquemotkimberley@gmail.com" class="btn btn-outline-light">Contact me</a>
+        </div>
+        <script>
+            var typed = new Typed(".auto-type", {
+                strings: ["kimberley :)", "coding ;)", "sleeping zZz"],
+                typeSpeed: 150,
+                backSpeed: 150,
+                loop: true
+            })
+        </script>
+    </section>
+    <section class="container-fluid" id="skills">
+        <div class="col-10 col-lg-6 skills">
+            <div class="text">
+                <h2>My Skills</h2>
+                <p>Experince and skills I acquired either at school, work or by myself!</p>
             </div>
-            <script>
-                var typed = new Typed(".auto-type", {
-                    strings: ["kimberley :)", "coding ;)", "sleeping zZz"],
-                    typeSpeed: 150,
-                    backSpeed: 150,
-                    loop: true
-                })
-            </script>
-        </section>
-        <section class="container-fluid" id="skills">
-            <div class="col-10 col-lg-6 skills">
-                <div class="text">
-                    <h2>My Skills</h2>
-                    <p>Experince and skills I acquired either at school, work or by myself!</p>
-                </div>
-                    
-                    <div class="skill-card">
-                        <div class="card">
-                            <i class="fa-solid fa-note-sticky"></i>
-                            <h4>Front-End<br>Development</h4>
-                            <p>I learnt to use HTML, CSS and Bootstrap in order to realize this website or personnal project.</p>
-                        </div>
-                        
-                        <div class="card">
-                            <i class="fa-solid fa-file-code"></i>                            
-                            <h4>Back-End<br>Development</h4>
-                            <p>I acquired knowledge in SQL and databases during my cursus at school, I can also use JavaScript.</p>
-                        </div>
-                        
-                        <div class="card">
-                            <i class="fa-solid fa-terminal"></i>
-                            <h4>Software Development</h4>
-                            <p>I learned multiple languages during my scholarity, as you will see on my projects, such as : C#, C++ (and C), Python and Java.</p>
-                        </div>
-                        
-                        <div class="card">
-                            <i class="fa-solid fa-microchip"></i>
-                            <h4>Electronics</h4>
-                            <p>I learnt to program a STM32 ship and it was part of an important project in school, but I can also use Arduino and Eagle softwares.</p>
-                        </div>
-                        
-                        <div class="card">
-                            <i class="fa-solid fa-cube"></i>
-                            <h4>Unity Engine</h4>
-                            <p>Unity is my main software at work, we use it in order to manipulate 3D models on real-time and create CAD softwares in VR.</p>
-                        </div>
-                        
-                        <div class="card">
-                            <i class="fa-solid fa-code-branch"></i>                            
-                            <h4>GitHub</h4>
-                            <p>I use Git and GitHub a lot : school, work, personnal projects. It is a really useful tool that I am glad to know.</p>
-                        </div>
-                    </div>
-            </div>
-        </section>
 
-        <section id="portfolio">
-            <div class="container">
-                <div class="white-divider"></div>
-                <div class="heading">
-                    <h2>Portfolio</h2>
-                      <p style="color:#64a8f8;text-align: center;">Some of my personal projects !</p>
+            <div class="skill-card">
+                <div class="card">
+                    <i class="fa-solid fa-note-sticky"></i>
+                    <h4>Front-End<br>Development</h4>
+                    <p>I learnt to use HTML, CSS and Bootstrap in order to realize this website or personnal project.
+                    </p>
                 </div>
-                    <div class="container">
-                        <div class="card">
-                          <h2>ChefBot</h2>
-                          <p>React ChatBot</p>
-                          <span>Hover here</span>
-                          <div class="pic" style="background-image: url(images/ChefBot.png);">
-                            <span href="https://github.com/MonaBlanc" target="_blank"></span></div>
-                          <button></button>
-                        </div>
-                        <div class="card card2">
-                          <h2>Python</h2>
-                          <p>Japanese Flashcards</p>
-                          <span>Hover here</span>
-                          <div class="pic" style="background-image: url(images/Flashcards.png);"></div>
-                          <button></button>
-                        </div>
-                        <div class="card card3">
-                            <h2>C++</h2>
-                            <p>Sumo Robot STM32</p>
-                            <span>Hover here</span>
-                            <div class="pic" style="background-image: url(images/elec.PNG);"><span href="https://github.com/MonaBlanc" target="_blank"></span></div>
-                            <button></button>
-                          </div>
-                          <div class="card card4">
-                            <h2>MERN</h2>
-                            <p>ChatBot Full-Stack</p>
-                            <span>Hover here</span>
-                            <div class="pic" style="background-image: url(images/ChefBotMERN.png);"><span href="https://github.com/MonaBlanc" target="_blank"></span></div>
-                            <button></button>
-                          </div>
-                      </div>
-                    </div>
-            </div>
-            </section>
 
-        <section id="experience">
-            <div class="container">
-                <div class="divider white"></div>
+                <div class="card">
+                    <i class="fa-solid fa-file-code"></i>
+                    <h4>Back-End<br>Development</h4>
+                    <p>I acquired knowledge in SQL and databases during my cursus at school, I can also use JavaScript.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-terminal"></i>
+                    <h4>Software Development</h4>
+                    <p>I learned multiple languages during my scholarity, as you will see on my projects, such as : C#,
+                        C++ (and C), Python and Java.</p>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-microchip"></i>
+                    <h4>Electronics</h4>
+                    <p>I learnt to program a STM32 ship and it was part of an important project in school, but I can
+                        also use Arduino and Eagle softwares.</p>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-cube"></i>
+                    <h4>Unity Engine</h4>
+                    <p>Unity is my main software at work, we use it in order to manipulate 3D models on real-time and
+                        create CAD softwares in VR.</p>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-code-branch"></i>
+                    <h4>GitHub</h4>
+                    <p>I use Git and GitHub a lot : school, work, personnal projects. It is a really useful tool that I
+                        am glad to know.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <div class="white-divider"></div>
+            <div class="heading">
+                <h2>Portfolio</h2>
+                <p style="color:#64a8f8;text-align: center;">Some of my personal projects !</p>
+            </div>
+              <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/ChefBotPlus.png" />
+                        <h2>Chefbot</h2>
+                        <a href="#"><span class="tag">#React</span></a>
+                        <a href="#"><span class="tag">#NodeJS</span></a>
+                        <a href="#"><span class="tag">#API</span></a>
+                        <a href="#"><span class="tag">#Express</span></a>
+                        <a href="#"><span class="tag">#MongoDB</span></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/BlackjackSquare.png" />
+                        <h2>Blackjack</h2>
+                        <a href="#"><span class="tag">#Python</span></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/FlashCards.png" />
+                        <h2>Flashcards</h2>
+                        <a href="#"><span class="tag">#Python</span></a>
+                        <a href="#"><span class="tag">#Tkinter</span></a>
+                        <a href="#"><span class="tag">#Pandas</span></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/GunplaEshop.png" />
+                        <h2>GunplaEshop</h2>
+                        <a href="#"><span class="tag">#React</span></a>
+                        <a href="#"><span class="tag">#Tailwind CSS</span></a>
+                        <a href="#"><span class="tag">#SpringBoot</span></a>
+                        <a href="#"><span class="tag">#Java</span></a>
+                        <a href="#"><span class="tag">#H2</span></a>
+                    </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        effect: "flip",
+        grabCursor: true,
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        });
+    </script>
+
+            <!-- <div class="container">
+                <div class="card">
+                    <h2>ChefBot</h2>
+                    <p>React ChatBot</p>
+                    <span>Hover here</span>
+                    <div class="pic" style="background-image: url(images/ChefBot.png);">
+                        <span href="https://github.com/MonaBlanc/ChatBot/blob/master/README.md" target="_blank">hello</span>
+                    </div>
+                    <button></button>
+                </div>
+                <div class="card card2">
+                    <h2>Python</h2>
+                    <p>Japanese Flashcards</p>
+                    <span>Hover here</span>
+                    <div class="pic" style="background-image: url(images/Flashcards.png);"></div>
+                    <button></button>
+                </div>
+                <div class="card card3">
+                    <h2>C++</h2>
+                    <p>Sumo Robot STM32</p>
+                    <span>Hover here</span>
+                    <div class="pic" style="background-image: url(images/elec.PNG);"><span
+                            href="https://github.com/MonaBlanc" target="_blank"></span></div>
+                    <button></button>
+                </div>
+                <div class="card card4">
+                    <h2>MERN</h2>
+                    <p>ChatBot Full-Stack</p>
+                    <span>Hover here</span>
+                    <div class="pic" style="background-image: url(images/ChefBotMERN.png);"><span
+                            href="https://github.com/MonaBlanc" target="_blank"></span></div>
+                    <button></button>
+                </div>
+            </div> -->
+
+
+
+
+        </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <div class="divider white"></div>
             <div class="heading">
                 <h2 class="mb-3" style="color:#d2f1ff; text-align: center;">Work Experience</h2>
                 <p style="color:#64a8f8;text-align: center;">A little details about my professional experiences</p>
@@ -146,7 +220,8 @@
                             <div class="timeline-heading">
                                 <h3>FAURECIA</h3>
                                 <h4>Serious Game Developper Apprentice</h4>
-                                <p class="text-muted"><span style="color : #64a8f8;" class="bi-clock-fill"></span> 2021-2024</p>
+                                <p class="text-muted"><span style="color : #64a8f8;" class="bi-clock-fill"></span>
+                                    2021-2024</p>
                             </div>
                             <div class="timeline-body">
                                 <p>Unity Development</p>
@@ -163,7 +238,8 @@
                             <div class="timeline-heading">
                                 <h3>DELCOS</h3>
                                 <h4>Telecom technician</h4>
-                                <p class="text-muted"><span style="color : #64a8f8;" class="bi-clock-fill"></span> 2019-2021</p>
+                                <p class="text-muted"><span style="color : #64a8f8;" class="bi-clock-fill"></span>
+                                    2019-2021</p>
                             </div>
                             <div class="timeline-body">
                                 <p>RJ45 Network Setup</p>
@@ -173,11 +249,11 @@
                     </div>
                 </li>
             </ul>
-            </div>
+        </div>
 
-       </section>
+    </section>
 
-       <section id="education">
+    <section id="education">
         <div class="container">
             <div class="divider white"></div>
             <div class="heading">
@@ -185,11 +261,11 @@
                 <p style="color:#64a8f8;text-align: center;">School and licenses</p>
             </div>
             <div class="row">
-                
-                
+
+
                 <div class="col-sm-6">
                     <div class="education-block">
-                        
+
                         <h5>2019-2021</h5>
                         <span class="bi bi-mortarboard" style="font-size: 40px; color: #64a8f8;"></span>
                         <h3>University Institute of Technology</h3>
@@ -200,13 +276,13 @@
                         <p>Embedded Systems, C and C++ languages</p>
 
 
-                
+
                     </div>
                 </div>
 
                 <div class="col-sm-6">
                     <div class="education-block">
-                        
+
                         <h5>2021-2024 (In Progress...)</h5>
                         <span class="bi bi-mortarboard" style="font-size: 40px; color: #64a8f8;"></span>
                         <h3>Polytech Nancy</h3>
@@ -216,14 +292,14 @@
                         <p>Computer Science, Network, Robotics and Automatism</p>
                         <p>Apprenticeship as a developer</p>
                         <p>C#, Java, Python</p>
-                
+
                     </div>
                 </div>
-                
-                
+
+
             </div>
         </div>
-    
+
     </section>
     <section id="certifications">
         <div class="divider white"></div>
@@ -231,75 +307,79 @@
             <h2 class="mb-3" style="color:#d2f1ff; text-align: center;">A little further?</h2>
         </div>
         <div class="container">
-        <ul>
-            <li style="--color: #d2f1ff">
-              <span class="base"></span>
-              <span class="title">Hobbies</span>
-              <span class="icon">
-                <i class="bi bi-hash"></i>
-              </span>
-            </li>
-            <li style="--color: #64a8f8">
-              <span class="base"></span>
-              <span class="title">Certifications</span>
-              <span class="icon">
-                <i class="bi bi-award-fill"></i>
-              </span>
-            </li>
-            <li style="--color: #64ffda">
-              <span class="base"></span>
-              <span class="title">Projects</span>
-              <span class="icon">
-                <i class="bi bi-braces"></i>
-              </span>
-            </li>
-          </ul>
-          
-          <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-          <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-          </div>
+            <ul>
+                <li style="--color: #d2f1ff">
+                    <span class="base"></span>
+                    <span class="title">Hobbies</span>
+                    <span class="icon">
+                        <i class="bi bi-hash"></i>
+                    </span>
+                </li>
+                <li style="--color: #64a8f8">
+                    <span class="base"></span>
+                    <span class="title">Certifications</span>
+                    <span class="icon">
+                        <i class="bi bi-award-fill"></i>
+                    </span>
+                </li>
+                <li style="--color: #64ffda">
+                    <span class="base"></span>
+                    <span class="title">Projects</span>
+                    <span class="icon">
+                        <i class="bi bi-braces"></i>
+                    </span>
+                </li>
+            </ul>
+
+            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        </div>
     </section>
-        <div class="sidebar-nav">
-            <div class="rs-sidenav rs-sidenav-subtle rs-sidenav-collapse-in" role="navigation">
-                <div class="rs-sidenav-body">
-                    <div class="sidebar-links">
-                        <div class="fade-in-section is-visible" style="transition-delay: 100ms;">
-                            <div><a class="underline-hover-effect" href="#about">#about me</a></div>
-                        </div>
-                        <div class="fade-in-section is-visible" style="transition-delay: 200ms;">
-                            <div><a class="underline-hover-effect" href="#skills">#skills</a></div>
-                        </div>
-                        <div class="fade-in-section is-visible" style="transition-delay: 300ms;">
-                            <div><a class="underline-hover-effect" href="#portfolio">#portfolio</a></div>
-                        </div>
-                        <div class="fade-in-section is-visible" style="transition-delay: 400ms;">
-                            <div><a class="underline-hover-effect" href="#experience">#experience</a></div>
-                        </div>
-                        <div class="fade-in-section is-visible" style="transition-delay: 500ms;">
-                            <div><a class="underline-hover-effect" href="#education">#education</a></div>
-                        </div>
+    <div class="sidebar-nav">
+        <div class="rs-sidenav rs-sidenav-subtle rs-sidenav-collapse-in" role="navigation">
+            <div class="rs-sidenav-body">
+                <div class="sidebar-links">
+                    <div class="fade-in-section is-visible" style="transition-delay: 100ms;">
+                        <div><a class="underline-hover-effect" href="#about">#about me</a></div>
+                    </div>
+                    <div class="fade-in-section is-visible" style="transition-delay: 200ms;">
+                        <div><a class="underline-hover-effect" href="#skills">#skills</a></div>
+                    </div>
+                    <div class="fade-in-section is-visible" style="transition-delay: 300ms;">
+                        <div><a class="underline-hover-effect" href="#portfolio">#portfolio</a></div>
+                    </div>
+                    <div class="fade-in-section is-visible" style="transition-delay: 400ms;">
+                        <div><a class="underline-hover-effect" href="#experience">#experience</a></div>
+                    </div>
+                    <div class="fade-in-section is-visible" style="transition-delay: 500ms;">
+                        <div><a class="underline-hover-effect" href="#education">#education</a></div>
                     </div>
                 </div>
             </div>
-            <div class="sidebar-logos" href="/">
-                <a underline-hover-effect href="https://fr.linkedin.com/in/kimberley-jacquemot" target="_blank"><i class="fab fa-linkedin" style="font-size: 30px; color:var(--third-color); padding: 5px;"></i></a>
-                <a href="https://github.com/MonaBlanc" target="_blank"><i class="fab fa-github" style="font-size: 30px; color:var(--third-color);padding: 5px;"></i></a>
-                <!-- <a href="https://drive.google.com/uc?export=download&id=1ekZBQR730nqygfHs3AXzfH0w21NCA18C"><i class="fas fa-file-download" style="font-size: 30px; color:var(--third-color);padding: 5px;"></i></a> -->
-            </div>
         </div>
+        <div class="sidebar-logos" href="/">
+            <a underline-hover-effect href="https://fr.linkedin.com/in/kimberley-jacquemot" target="_blank"><i
+                    class="fab fa-linkedin" style="font-size: 30px; color:var(--third-color); padding: 5px;"></i></a>
+            <a href="https://github.com/MonaBlanc" target="_blank"><i class="fab fa-github"
+                    style="font-size: 30px; color:var(--third-color);padding: 5px;"></i></a>
+            <!-- <a href="https://drive.google.com/uc?export=download&id=1ekZBQR730nqygfHs3AXzfH0w21NCA18C"><i class="fas fa-file-download" style="font-size: 30px; color:var(--third-color);padding: 5px;"></i></a> -->
+        </div>
+    </div>
     <footer class="text-center">
         <a href="#about">
-            <span class="bi bi-caret-up" style="font-size: 25px; margin: 20px;  color: var(--third-color); height: 30px;"></span>
+            <span class="bi bi-caret-up"
+                style="font-size: 25px; margin: 20px;  color: var(--third-color); height: 30px;"></span>
         </a>
         <h5>Built and designed by Kimberley Jacquemot.</h5>
         <h5>All rights reserved. ©</h5>
 
-        
+
     </footer>
 
-         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-       
-    </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+</body>
+
 </html>
