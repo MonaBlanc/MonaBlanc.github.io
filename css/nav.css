@@ -126,10 +126,16 @@ A bientot pour de nouveau tips magiques !🪄🪄🪄🪄🪄🪄
   text-decoration: none;
 }
 
+a:hover {
+    color: var(--bg-color);
+    text-decoration: none;
+}
+
 .sidebar a.underline-hover-effect {
   text-decoration: none;
   color: var(--bg-color);
 }
+
   
 
 
