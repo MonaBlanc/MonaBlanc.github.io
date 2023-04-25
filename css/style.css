@@ -1,5 +1,6 @@
 @import "./nav.css";
 
+
 /* GENERAL */
 
 * {
@@ -7,10 +8,10 @@
 }
 
 :root {
-  --main-color: #64a8f8;
-  --second-color: #d2f1ff;
-  --third-color: #64ffda;
-  --bg-color: #001d5b;
+  --main-color: #158580;
+  --second-color: #fffffe;
+  --third-color: #f9bc60;
+  --bg-color: #004643;
   --main-grid: repeat(auto-fill, minmax(300px, 1fr));
   --main-padding: 40px;
 }
@@ -60,7 +61,7 @@ section .heading {
 }
 /*ABOUT*/
 #about {
-  background-color: #001d5b;
+  background-color: var(--bg-color);
 }
 .avatar {
   text-align: center;
@@ -68,16 +69,16 @@ section .heading {
 }
 
 #about .heading h1 {
-  color: #d2f1ff;
+  color: var(--second-color);
 }
 #about .heading h3 {
-  color: #64a8f8;
+  color: var(--main-color);
 }
 #about .heading p {
   color: #fff;
 }
 #about span {
-  color: #64ffda;
+  color: var(--third-color);
 }
 
 #about a.underline-hover-effect {
@@ -247,14 +248,12 @@ section .heading {
 .swiper {
   width: 60%;
   height: auto;
-  padding: 50px;
 }
 
 .swiper-slide {
   background-position: center;
   background-size: cover;
   width: 600px;
-  height: 600px;
   padding-bottom: 50px;
 }
 
@@ -285,6 +284,25 @@ section .heading {
 .swiper h1.tag {
   margin-left: 0;
   margin-right: 0;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  position: absolute;
+  top: var(--swiper-navigation-top-offset,50%);
+  width: calc(var(--swiper-navigation-size)/ 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--swiper-navigation-color,var(--main-color));
+}
+
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: var(--swiper-pagination-color,var(--third-color));
 }
 
 /*EXPERIENCE*/
