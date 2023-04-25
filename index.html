@@ -268,21 +268,21 @@
         </div>
         <div class="container">
             <ul>
-                <li style="--color: #d2f1ff">
+                <li style="--color: #d2f1ff;">
                     <span class="base"></span>
-                    <span class="title">Hobbies</span>
+                    <span class="title">Challenges</span>
                     <span class="icon">
                         <i class="bi bi-hash"></i>
                     </span>
                 </li>
-                <li style="--color: #64a8f8">
+                <li style="--color: #64a8f8;">
                     <span class="base"></span>
                     <span class="title">Certifications</span>
                     <span class="icon">
                         <i class="bi bi-award-fill"></i>
                     </span>
                 </li>
-                <li style="--color: #64ffda">
+                <li style="--color: #64ffda;">
                     <span class="base"></span>
                     <span class="title">Projects</span>
                     <span class="icon">
@@ -295,36 +295,51 @@
             <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         </div>
     </section>
-    <div class="sidebar-nav">
-        <div class="rs-sidenav rs-sidenav-subtle rs-sidenav-collapse-in" role="navigation">
-            <div class="rs-sidenav-body">
-                <div class="sidebar-links">
-                    <div class="fade-in-section is-visible" style="transition-delay: 100ms;">
-                        <div><a class="underline-hover-effect" href="#about">#about me</a></div>
-                    </div>
-                    <div class="fade-in-section is-visible" style="transition-delay: 200ms;">
-                        <div><a class="underline-hover-effect" href="#skills">#skills</a></div>
-                    </div>
-                    <div class="fade-in-section is-visible" style="transition-delay: 300ms;">
-                        <div><a class="underline-hover-effect" href="#portfolio">#portfolio</a></div>
-                    </div>
-                    <div class="fade-in-section is-visible" style="transition-delay: 400ms;">
-                        <div><a class="underline-hover-effect" href="#experience">#experience</a></div>
-                    </div>
-                    <div class="fade-in-section is-visible" style="transition-delay: 500ms;">
-                        <div><a class="underline-hover-effect" href="#education">#education</a></div>
+    <div id="menu">
+        <div id="menu-bar" onclick="menuOnClick()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+        </div>
+        <div class="sidebar-nav" id="sidebar-nav">
+            <div class="rs-sidenav rs-sidenav-subtle rs-sidenav-collapse-in" role="navigation">
+                <div class="rs-sidenav-body">
+                    <div class="sidebar-links">
+                        <div class="fade-in-section is-visible" style="transition-delay: 100ms;">
+                            <div><a class="underline-hover-effect" href="#about">#about me</a></div>
+                        </div>
+                        <div class="fade-in-section is-visible" style="transition-delay: 200ms;">
+                            <div><a class="underline-hover-effect" href="#skills">#skills</a></div>
+                        </div>
+                        <div class="fade-in-section is-visible" style="transition-delay: 300ms;">
+                            <div><a class="underline-hover-effect" href="#portfolio">#portfolio</a></div>
+                        </div>
+                        <div class="fade-in-section is-visible" style="transition-delay: 400ms;">
+                            <div><a class="underline-hover-effect" href="#experience">#experience</a></div>
+                        </div>
+                        <div class="fade-in-section is-visible" style="transition-delay: 500ms;">
+                            <div><a class="underline-hover-effect" href="#education">#education</a></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="sidebar-logos" href="/">
-            <a underline-hover-effect href="https://fr.linkedin.com/in/kimberley-jacquemot" target="_blank"><i
-                    class="fab fa-linkedin" style="font-size: 30px; color:var(--third-color); padding: 5px;"></i></a>
-            <a href="https://github.com/MonaBlanc" target="_blank"><i class="fab fa-github"
-                    style="font-size: 30px; color:var(--third-color);padding: 5px;"></i></a>
-            <!-- <a href="https://drive.google.com/uc?export=download&id=1ekZBQR730nqygfHs3AXzfH0w21NCA18C"><i class="fas fa-file-download" style="font-size: 30px; color:var(--third-color);padding: 5px;"></i></a> -->
+            <div class="sidebar-logos" href="/">
+                <a underline-hover-effect href="https://fr.linkedin.com/in/kimberley-jacquemot" target="_blank"><i
+                        class="fab fa-linkedin" style="font-size: 30px; color:var(--bg-color); padding: 5px;"></i></a>
+                <a href="https://github.com/MonaBlanc" target="_blank"><i class="fab fa-github"
+                        style="font-size: 30px; color:var(--bg-color);padding: 5px;"></i></a>
+                <!-- <a href="https://drive.google.com/uc?export=download&id=1ekZBQR730nqygfHs3AXzfH0w21NCA18C"><i class="fas fa-file-download" style="font-size: 30px; color:var(--third-color);padding: 5px;"></i></a> -->
+            </div>
         </div>
     </div>
+    <div class="menu-bg" id="menu-bg"></div>
+    <script>
+        function menuOnClick() {
+        document.getElementById("menu-bar").classList.toggle("change");
+        document.getElementById("sidebar-nav").classList.toggle("change");
+        document.getElementById("menu-bg").classList.toggle("change-bg");
+}
+    </script>
     <footer class="text-center">
         <a href="#about">
             <span class="bi bi-caret-up"
