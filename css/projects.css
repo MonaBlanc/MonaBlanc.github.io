@@ -1,0 +1,77 @@
+/* TAGS SELECTORS */
+h1 {
+    text-align: center;
+    color: white;
+    padding-top: 5%;
+}
+#selection {
+    /* Center the tags in the section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Make the section take up the whole width of the page */
+    width: 100%;
+
+}
+
+#projectList {
+    display: flex;
+    flex-flow: row-reverse wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+#projectList .item{
+    gap: 10px;
+    flex-grow: 1;
+    transition: all ease .5s;
+    overflow: hidden;
+
+}
+
+#projectList .item #GunplaEshop {
+    flex-grow: 4;
+}
+
+#projectList .img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+#projectList .img-container p {
+    position: absolute;
+    color: var(--second-color);
+    visibility: hidden;
+    transition: visibility 0s, opacity 0.5s linear;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+/* Hover effect on the item */
+#projectList .img-container:hover img {
+    transform: scale(1.1);
+    filter: grayscale(1) opacity(.6) blur(1px);
+    cursor: pointer;
+}
+#projectList .img-container:hover p{
+    visibility: visible;
+    opacity: 1; 
+    cursor: pointer;
+
+}
+
+#projectList img {
+    aspect-ratio: 4/3;
+    width: 300px;
+    transition: all ease .5s;
+}
+
+#projectList h2 {
+    text-align: center;
+    color: white;
+    padding-top: 5%;
+}

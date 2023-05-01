@@ -1,19 +1,98 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>kimberley</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    </head>
-    <body>
-        
-    </body>
+
+<head>
+    <title>kimberley</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+
+<body>
+    <h1>Projects</h1>
+    <section id="selection">
+        <span class="tag" data-tag="all">#All</span>
+        <span class="tag" data-tag="front">#Front-End</span>
+        <span class="tag" data-tag="back">#Back-End</span>
+        <span class="tag" data-tag="software">#Software</span>
+    </section>
+    <section id="projectList">
+        <div id="front">
+            <div class="item">
+                <div id="GunplaEshop">
+                    <h2>GunplaEshop</h2>
+                    <div class="img-container">
+                        <p>> Click here ! <</p>
+                        <img src="images/GunplaEshop.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="back">
+            <div class="item">
+                <div id="ChefBot">
+                    <h2>Chefbot</h2>
+                    <div class="img-container">
+                        <p>> Click here ! <</p>
+                        <img src="images/ChefBotPlus.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="software">
+            <div class="item">
+                <div id="BlackJack">
+                    <h2>BlackJack</h2>
+                    <div class="img-container">
+                        <p>> Click here ! <</p>
+                        <img src="images/BlackJackSquare.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div id="FlashCards">
+                    <h2>Flashcards</h2>
+                    <div class="img-container">
+                        <p>> Click here ! <</p>
+                    <img src="images/FlashCards.png" />
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script>
+        function modifyText() {
+            // Récupérer le contenu de la balise span
+            const tag = this.dataset.tag;
+            console.log(tag);
+            // Afficher les divs correspondantes au tag 
+            const projects = document.querySelectorAll("#projectList > div");
+
+            projects.forEach(elem => {
+                if (elem.id == tag || tag == "all") {
+                    elem.style.display = "flex";
+                } else {
+                    elem.style.display = "none";
+                }
+            });
+        }
+
+        // Ajouter un écouteur d'évènements
+        const filter = document.querySelectorAll(".tag");
+        filter.forEach(elem => {
+            elem.addEventListener("click", modifyText, false);
+        });
+    </script>
+</body>
+
 </html>

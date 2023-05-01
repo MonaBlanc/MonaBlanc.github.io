@@ -1,5 +1,3 @@
-@import "./nav.css";
-
 
 /* GENERAL */
 
@@ -86,8 +84,6 @@ section .heading {
   text-decoration: none;
   color: var(--third-color);
 }
-
-
 
 #about .underline-hover-effect {
   display: inline-block;
@@ -271,7 +267,7 @@ section .heading {
   color: #fff;
 }
 
-.swiper .tag {
+.tag {
   display: inline-block;
   border-radius: 3px;
   padding: 0.2em 0.5em 0.3em;
@@ -282,7 +278,7 @@ section .heading {
   margin: 0.25em 0.1em;
 }
 
-.swiper h1.tag {
+h1.tag {
   margin-left: 0;
   margin-right: 0;
 }

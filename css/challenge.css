@@ -1,4 +1,41 @@
-body, h1, h2, p { margin: 0; }
+body, h1, h2, p { 
+  margin: 0; 
+}
+
+a { 
+  color: var(--third-color);
+  text-decoration: none; 
+}
+
+a:hover { 
+  color: var(--third-color);
+  text-decoration: underline; 
+}
+
+a.underline-hover-effect {
+  text-decoration: none;
+  color: var(--third-color);
+}
+
+.underline-hover-effect {
+  display: inline-block;
+  padding-bottom: 0.15rem;
+  position: relative;
+}
+
+.underline-hover-effect::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #32da8e;
+  transition: width 0.25s ease-out;
+}
+.underline-hover-effect:hover::before {
+  width: 100%;
+}
 
 .quinconce-component
 {
@@ -74,7 +111,6 @@ body, h1, h2, p { margin: 0; }
   line-height: 1em;
   color: white;
   font-weight: bold;
-  text-transform: uppercase;
 }
 .img-container > .caption-wrapper
 {
@@ -82,6 +118,7 @@ body, h1, h2, p { margin: 0; }
 }
 .caption
 {
+  text-transform: uppercase;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -374,8 +411,9 @@ body, h1, h2, p { margin: 0; }
   }
   
   .description {
-    font-size: 14px;
+    font-size: 18px;
     color: white;
     font-weight: lighter;
     margin-bottom: 24px;
+    font-family: serif;
   }
