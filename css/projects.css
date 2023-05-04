@@ -51,6 +51,67 @@ h1 {
     font-size: 1.25rem;
 }
 
+dialog {
+    display: none;
+}
+
+dialog[open] {
+    display: block;
+    outline: 0;
+    padding: 5px;
+    border: 0px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    width: 50%;
+}
+
+.description{
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: var(--main-color);
+}
+
+.colSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50px;
+    align-items: center;
+}
+
+em{
+    color: white;
+    font-size: 0.8rem;
+}
+
+.description h2#ModalTitle{
+    color: white;
+    text-align: left;
+    padding-top: 0;
+    margin-bottom: 0;
+}
+
+.description p{
+    color: white;
+}
+
+.description svg{
+    cursor: pointer;
+}
+
+.description svg path{
+    fill: var(--bg-color);
+}
+
+.description img{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
 /* Hover effect on the item */
 #projectList .img-container:hover img {
     transform: scale(1.1);
