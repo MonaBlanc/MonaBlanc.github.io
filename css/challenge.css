@@ -85,13 +85,15 @@ a.underline-hover-effect {
   flex-direction: column;
   justify-content: center;
 }
+
 .img-container .project
 {
   width: 100%;
   max-width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: 50% 50%;
   border-radius: 40px;
+  aspect-ratio: 1/1;
 }
 
 
@@ -243,6 +245,8 @@ a.underline-hover-effect {
 }
 .caption-wrapper img
 {
+  aspect-ratio: 1/1;
+  object-fit: cover;
   transition: transform 0.6s ease-in-out 0s;
 }
 .caption { pointer-events: none; }
@@ -399,7 +403,15 @@ a.underline-hover-effect {
     left: calc(50% - 45px);
     filter: drop-shadow(8px 6px 8px rgb(0 0 0 / 50%));
   }
-  
+
+  .avatar-league {
+    position: absolute;
+    width: 100px;
+    top: -7%;
+    left: calc(50% - 45px);
+    filter: drop-shadow(8px 6px 8px rgb(0 0 0 / 50%));
+  }
+
   .name {
     font-size: 22px;
   }
