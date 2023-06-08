@@ -1,9 +1,14 @@
+* {
+    scroll-behavior: smooth;
+  }
+
 /* TAGS SELECTORS */
 h1 {
     text-align: center;
     color: white;
     padding-top: 5%;
 }
+
 #selection {
     /* Center the tags in the section */
     display: flex;
@@ -21,7 +26,7 @@ h1 {
     gap: 10px;
 }
 
-#projectList .item{
+#projectList .item {
     gap: 10px;
     flex-grow: 1;
     transition: all ease .5s;
@@ -75,27 +80,49 @@ dialog::backdrop {
     background-color: rgba(0, 0, 0, .5);
     -webkit-animation: none;
 }
-dialog[open]::backdrop {
+/* Animation for showing the popup */
+@keyframes show-popup {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  /* Animation for hiding the popup */
+  @keyframes hide-popup {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  /* Apply the fade-in animation to the dialog */
+  dialog[open]::backdrop {
+    animation: show-popup 0.5s ease;
     -webkit-animation: show-backdrop 0.5s ease 0.2s normal;
-}
-dialog.hide::backdrop {
+
+  }
+  
+  /* Apply the fade-out animation to the dialog */
+  dialog.hide::backdrop {
+    animation: hide-popup 0.5s ease;
     -webkit-animation: hide-backdrop 0.5s ease 0.2s normal;
-}
+
+  }
+
 @-webkit-keyframes show-backdrop {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
-@-webkit-keyframes hide-backdrop{
+
+@-webkit-keyframes hide-backdrop {
     to {
         opacity: 0;
     }
 }
 
-.description{
+.description {
     padding: 15px;
     display: flex;
     flex-direction: row;
@@ -104,7 +131,7 @@ dialog.hide::backdrop {
     background-color: var(--main-color);
 }
 
-.colSide{
+.colSide {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -112,31 +139,31 @@ dialog.hide::backdrop {
     align-items: center;
 }
 
-em{
+em {
     color: white;
     font-size: 0.8rem;
 }
 
-.description h2#ModalTitle{
+.description h2#ModalTitle {
     color: white;
     text-align: left;
     padding-top: 0;
     margin-bottom: 0;
 }
 
-.description p{
+.description p {
     color: white;
 }
 
-.description svg{
+.description svg {
     cursor: pointer;
 }
 
-.description svg path{
+.description svg path {
     fill: var(--bg-color);
 }
 
-.description img{
+.description img {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
@@ -147,9 +174,10 @@ em{
     filter: grayscale(1) opacity(.6) blur(1px);
     cursor: pointer;
 }
-#projectList .img-container:hover p{
+
+#projectList .img-container:hover p {
     visibility: visible;
-    opacity: 1; 
+    opacity: 1;
     cursor: pointer;
 
 }
@@ -165,3 +193,44 @@ em{
     color: white;
     padding-top: 5%;
 }
+
+.tree{
+    padding: 1.5rem;
+}
+
+a {
+    color: var(--third-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--third-color);
+    text-decoration: underline;
+}
+
+a.underline-hover-effect {
+    text-decoration: none;
+    color: var(--third-color);
+}
+
+
+.underline-hover-effect {
+    display: inline-block;
+    padding-bottom: 0.15rem;
+    position: relative;
+  }
+  
+  .underline-hover-effect::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: #32da8e;
+    transition: width 0.25s ease-out;
+  }
+  .underline-hover-effect:hover::before {
+    width: 100%;
+  }
+  

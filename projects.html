@@ -18,6 +18,9 @@
 </head>
 
 <body>
+    <div class="tree">
+        <a class="underline-hover-effect" href="/index.html">Retour à l'accueil</a>
+    </div>
     <h1>Projects</h1>
     <section id="selection">
         <span class="tag" data-tag="all">#All</span>
@@ -29,7 +32,7 @@
         <div id="front">
             <div class="item">
                 <div id="GunplaEshop">
-                    <dialog id="modalDescriptionGunplaShop">
+                    <dialog id="modalDescriptionGunplaShop"  class="hide">
                         <div class="description">
                             <a href="https://github.com/MonaBlanc/GunplaShop-frontend/blob/master/README.md" target="_blank">
                                 <img src="images/GunplaEshop.png" />
@@ -37,7 +40,9 @@
                             <div class="col">
                                 <h2 id="ModalTitle">GunplaEshop</h2>
                                 <em>2023</em>
-                                <p>Blablabla</p>
+                                <p>Gunpla Eshops is an e-commerce platform specifically designed for Gundam plastic model (Gunpla) enthusiasts. With a seamless combination of the powerful Spring Boot framework for the backend and the interactive React library for the frontend, Gunpla Eshops provides a user-friendly and immersive shopping experience for hobbyists and collectors.
+
+</p>
                             </div>
                             <div class="colSide">
                                 <svg id="confirmBtn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -87,7 +92,7 @@
         <div id="back">
             <div class="item">
                 <div id="ChefBot">
-                    <dialog id="modalDescription">
+                    <dialog id="modalDescription" class="hide">
                         <div class="description">
                             <a href="https://github.com/MonaBlanc/ChatBot/blob/master/README.md" target="_blank">
                                 <img src="images/ChefBotPlus.png" />
@@ -95,7 +100,8 @@
                             <div class="col">
                                 <h2 id="ModalTitle">ChefBot</h2>
                                 <em>2022-2023</em>
-                                <p>Blablabla</p>
+                                <p>Chefbot helps you choose what to eat depending on your diet and even helps you make your grocery list!
+                                </p>
                             </div>
                             <div class="colSide">
                                 <svg id="confirmBtn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -195,7 +201,7 @@
 
         <div id="software">
             <div class="item">
-                <dialog id="modalDescriptionBlackJack">
+                <dialog id="modalDescriptionBlackJack"  class="hide">
                     <div class="description">
                         <a href="https://github.com/MonaBlanc/100DaysOfCode/tree/main/Day%2011%20-%20Blackjack" target="_blank">
                             <img src="images/BlackjackSquare.png" />
@@ -203,7 +209,7 @@
                         <div class="col">
                             <h2 id="ModalTitle">BlackJack</h2>
                             <em>2023</em>
-                            <p>Blablabla</p>
+                            <p>The Blackjack Python Console Game is a text-based implementation of the popular casino card game, Blackjack. It allows players to play against a computer dealer and experience the excitement of trying to beat the house.</p>
                         </div>
                         <div class="colSide">
                             <svg id="confirmBtnBlackJack" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -242,7 +248,7 @@
             </script>
 
             <div class="item">
-                <dialog id="modalDescriptionFC">
+                <dialog id="modalDescriptionFC" class="hide">
                     <div class="description">
                         <a href="https://github.com/MonaBlanc/100DaysOfCode/tree/main/Day%2031%20-%20Flash%20Cards%20App" target="_blank">
                             <img src="images/FlashCards.png" />
@@ -250,7 +256,7 @@
                         <div class="col">
                             <h2 id="ModalTitle">FlashCards</h2>
                             <em>2023</em>
-                            <p>Blablabla</p>
+                            <p>Made a python application to help me while learning Japanese words and did it with Flaschards system where as long as you don't get the word, you will have to train for it.</p>
                         </div>
                         <div class="colSide">
                             <svg id="confirmBtnFlashCards" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -273,18 +279,25 @@
                 </div>
             </div>
             <script>
-                const showDialogFC = document.getElementById('showDialogFC');
-                const modalDescriptionFC = document.getElementById('modalDescriptionFC');
-                const confirmBtnFlashCards = modalDescriptionFC.querySelector('#confirmBtnFlashCards');
-    
-    
-                showDialogFC.addEventListener('click', () => {
-                    modalDescriptionFC.showModal();
-                });
-    
-                confirmBtnFlashCards.addEventListener('click', () => {
-                    modalDescriptionFC.close();
-                });
+              const showDialogFC = document.getElementById('showDialogFC');
+const modalDescriptionFC = document.getElementById('modalDescriptionFC');
+const confirmBtnFlashCards = modalDescriptionFC.querySelector('#confirmBtnFlashCards');
+
+showDialogFC.addEventListener('click', () => {
+  modalDescriptionFC.showModal();
+});
+
+confirmBtnFlashCards.addEventListener('click', () => {
+  modalDescriptionFC.classList.add('hide'); // Add the "hide" class
+  modalDescriptionFC.close();
+});
+
+modalDescriptionFC.addEventListener('animationend', () => {
+  if (modalDescriptionFC.classList.contains('hide')) {
+    modalDescriptionFC.classList.remove('hide'); // Remove the "hide" class after the animation
+  }
+});
+
             </script>
         </div>
         </div>
