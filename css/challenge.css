@@ -2,6 +2,8 @@ body, h1, h2, p {
   margin: 0; 
 }
 
+/* Homepage redirection */
+
 a { 
   color: var(--third-color);
   text-decoration: none; 
@@ -30,12 +32,14 @@ a.underline-hover-effect {
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: #32da8e;
+  background-color: var(--third-color);
   transition: width 0.25s ease-out;
 }
 .underline-hover-effect:hover::before {
   width: 100%;
 }
+
+/* Quinconce */
 
 .quinconce-component
 {
@@ -263,7 +267,8 @@ a.underline-hover-effect {
 
 
 
-/* wysiwyg mgmt */
+/* wysiwyg what you see is what you get  */
+
 .wysiwyg
 {
   max-width: 40ch;
@@ -329,7 +334,7 @@ a.underline-hover-effect {
   right: 0;
   font-size: 6em;
   line-height: 1em;
-  color: #FCC200;
+  color: var(--third-color);
   z-index: -1;
 }
 

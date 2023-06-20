@@ -6,26 +6,24 @@
 }
 
 :root {
-  --main-color: #158580;
-  --second-color: #fffffe;
-  --third-color: #f9bc60;
-  --bg-color: #004643;
+  --main-color: #007EA7;
+  --second-color: #CCDBDC;
+  --third-color: #80CED7;
+  --bg-color: #003249;
   --main-grid: repeat(auto-fill, minmax(300px, 1fr));
   --main-padding: 40px;
 }
+
 body {
   font-family: "Rubik", sans-serif;
   overflow-x: hidden;
   background-color: var(--bg-color);
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+
+h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
+
 img {
   max-width: 100%;
   height: auto;
@@ -39,7 +37,7 @@ img {
 }
 
 .divider.white {
-  background-color: #d2f1ff;
+  background-color: var(--second-color);
   width: 100px;
   height: 3px;
   border-style: dotted;
@@ -58,7 +56,9 @@ section .heading {
   text-align: center;
   padding-bottom: 40px;
 }
+
 /*ABOUT*/
+
 #about {
   background-color: var(--bg-color);
 }
@@ -98,7 +98,7 @@ section .heading {
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: #32da8e;
+  background-color: var(--third-color);
   transition: width 0.25s ease-out;
 }
 #about .underline-hover-effect:hover::before {
@@ -303,6 +303,7 @@ h1.tag {
 }
 
 /*EXPERIENCE*/
+
 #experience {
   background-color: var(--bg-color);
 }
@@ -497,7 +498,7 @@ footer h5 {
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
   line-height: 0;
   flex-direction: column;
-  position: relative; /* add this */
+  position: relative; 
 }
 
 .box > img {
@@ -505,25 +506,25 @@ footer h5 {
   height: calc(100% - 10vh);
   object-fit: cover;
   transition: 0.5s;
-  position: absolute; /* add this */
+  position: absolute; 
   top: 0;
   left: 0;
 }
 
 .box > span {
   font-size: 3vh;
-  display: flex; /* add this */
-  align-items: center; /* add this */
-  justify-content: center; /* add this */
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
   text-align: center;
-  position: absolute; /* change this */
+  position: absolute; 
   bottom: 0;
   left: 0;
-  width: 100%; /* add this */
-  height: 12%; /* add this */
-  padding: 10px 0; /* add this for spacing */
-  background-color: #d2f1ff; /* add this for background color */
-  color: #001d5b; /* add this for text color */
+  width: 100%;
+  height: 12%;
+  padding: 10px 0;
+  background-color: #d2f1ff; 
+  color: #001d5b; 
   opacity: 0;
   transition: 0.5s;
   transform: translateY(-0%);
@@ -540,7 +541,7 @@ footer h5 {
 }
 
 .box:hover > span {
-  opacity: 1; /* add this */
+  opacity: 1; 
 }
 
 .containerPro {
@@ -552,6 +553,7 @@ footer h5 {
 }
 
 /* Certifications */
+
 #certifications {
   text-align: center;
   background-color: var(--bg-color);

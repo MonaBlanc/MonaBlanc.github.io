@@ -206,6 +206,8 @@ em {
     padding: 1.5rem;
 }
 
+/* Homepage redirection */
+
 a {
     color: var(--third-color);
     text-decoration: none;
@@ -235,7 +237,7 @@ a.underline-hover-effect {
     bottom: 0;
     width: 0;
     height: 1px;
-    background-color: #32da8e;
+    background-color: var(--third-color);
     transition: width 0.25s ease-out;
   }
   .underline-hover-effect:hover::before {
