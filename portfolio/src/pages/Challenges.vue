@@ -21,20 +21,19 @@
 import type { Challenge } from "../types";
 
 import ChallengeItem from "./ChallengeItem.vue";
-
 const challenges: Challenge[] = [
   {
     caption: "Elles bougent",
     description:
-      "Projet d'école écologique avec des lycéennes afin de sensibiliser sur l'utilisation de l'eau et optimiser la structure d'une école.",
+      "Ecological school project with high school girls to raise awareness about water usage and optimize the structure of a school.",
     image: "https://www.ellesbougent.com/documents/actualites/2381/image_innovatech-2.zoom.jpg",
     medal: "https://img.icons8.com/emoji/512/2nd-place-medal-emoji.png",
-    name: "Hackaton InnovaTech",
+    name: "InnovaTech Hackathon",
     organization: "Elles Bougent",
   },
   {
     caption: "SheCodes",
-    description: "Projet de page d'accueil sur le thème du japon pour un concours de sites webs entre développeuses.",
+    description: "Homepage project on the theme of Japan for a website contest among developers.",
     image:
       "https://coursereport-s3-production.global.ssl.fastly.net/uploads/school/logo/633/original/SheCodes_logo_square_white_background.png",
     medal: null,
@@ -43,26 +42,23 @@ const challenges: Challenge[] = [
   },
   {
     caption: "Polytech Nancy",
-    description:
-      "Evènement de cybersécurité avec plusieurs épreuves réalisé en binôme organisé par le réseau Polytech.",
+    description: "Cybersecurity event with several challenges carried out in pairs organized by the Polytech network.",
     image: "https://pbs.twimg.com/profile_images/1478391918920929281/klpZxcMf_400x400.jpg",
     medal: "https://img.icons8.com/emoji/512/2nd-place-medal-emoji.png",
     name: "Capture The Flag",
     organization: "Polytech",
   },
   {
-    caption: "[Upcoming] Shecodes",
-    description:
-      "Projet de page d'accueil sur le thème de Your Name pour un concours de sites webs entre développeuses.",
-    image:
-      "https://coursereport-s3-production.global.ssl.fastly.net/uploads/school/logo/633/original/SheCodes_logo_square_white_background.png",
-    medal: null,
-    name: "Epic Movie Challenge",
-    organization: "SheCodes",
+    caption: "CHE",
+    description: "War game competition with several challenges in the field of cybersecurity.",
+    image: "https://polytech-nancy.univ-lorraine.fr/wp-content/uploads/LogoCHE2022petit2.jpg",
+    medal: "https://img.icons8.com/emoji/48/1st-place-medal-emoji.png",
+    name: "Cyber Humanum Est",
+    organization: "ComCyber",
   },
   {
     caption: "100 Days of Code",
-    description: "Challenge de 100 jours durant lequel on réalise des projets dans plusieurs domaines.",
+    description: "100-day challenge during which projects are completed in various domains.",
     image: "https://ironfocus.com/wp-content/uploads/2020/04/9-python.jpg",
     medal: null,
     name: "100 Days of Code",
@@ -71,7 +67,7 @@ const challenges: Challenge[] = [
   {
     caption: "CodinGame",
     description:
-      "Le hackaton et une compétition de programmation en ligne 'CodinGame Spring Challenge 2023'. Challenge entre développeurs, afin de s'affronter sur les algorithmes et stratégies !",
+      "The hackathon and an online programming competition 'CodinGame Spring Challenge 2023'. Challenge between developers, to compete on algorithms and strategies!",
     image: "https://meritis.fr/wp-content/uploads/2023/05/preview.jpg",
     medal:
       "https://png.pngtree.com/png-vector/20220808/ourmid/pngtree-bronze-award-icon-ranking-with-star-design-png-image_6100837.png",

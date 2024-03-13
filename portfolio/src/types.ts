@@ -6,3 +6,15 @@ export interface Challenge {
   name: string;
   organization: string;
 }
+
+export interface Project {
+  category: string;
+  description: string;
+  id: string;
+  image: string;
+  isVisible: boolean;
+  link: string;
+  name: string;
+  stack: string[];
+  year: string;
+}

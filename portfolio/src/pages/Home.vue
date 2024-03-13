@@ -262,7 +262,7 @@
             </div>
             <div class="col">
               <li style="--color: var(--third-color)">
-                <a class="base" href="/certifications.html"></a>
+                <router-link :to="RouteName.Certifications" class="base"></router-link>
                 <span class="title">Certifications</span>
                 <span class="icon">
                   <i class="bi bi-award-fill"></i>
@@ -271,7 +271,7 @@
             </div>
             <div class="col">
               <li style="--color: #64ffda">
-                <a class="base" href="/projects.html"></a>
+                <router-link :to="RouteName.Projects" class="base"></router-link>
                 <span class="title">Projects</span>
                 <span class="icon">
                   <i class="bi bi-braces"></i>
