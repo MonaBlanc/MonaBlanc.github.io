@@ -1,0 +1,25 @@
+{
+    "extends": [
+        "stylelint-config-recommended-scss"
+    ],
+    "plugins": [
+        "stylelint-scss",
+        "stylelint-order"
+    ],
+    "ignoreFiles": [
+        "**/*"
+    ],
+    "rules": {
+        "at-rule-no-unknown": null,
+        "order/order": [
+            "custom-properties",
+            "declarations"
+        ],
+        "order/properties-alphabetical-order": true,
+        "declaration-block-no-duplicate-properties": true,
+        "color-no-invalid-hex": true,
+        "unit-no-unknown": true,
+        "shorthand-property-no-redundant-values": true,
+        "declaration-property-value-no-unknown": null
+    }
+}
