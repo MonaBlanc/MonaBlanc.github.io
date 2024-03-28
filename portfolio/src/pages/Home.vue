@@ -3,7 +3,12 @@
     <!-- About section -->
     <section class="container-fluid" id="about">
       <div class="col-8 col-lg-4 avatar">
-        <img src="/src/assets/images/room_kim.png" />
+        <div v-if="isLoading">
+          <PulseLoader color=" var(--third-color)" margin="15px" size="50px" />
+        </div>
+        <div v-else>
+          <img :src="require('@/assets/images/room_kim.png')" @load="isLoading = false" />
+        </div>
       </div>
       <div class="heading">
         <h1>
@@ -302,6 +307,7 @@ import Swiper from "swiper";
 import Typed from "typed.js";
 import { onMounted, ref } from "vue";
 import { RouterLink } from "vue-router";
+import PulseLoader from "vue-spinner/src/PulseLoader.vue";
 
 import NavBar from "../components/NavBar.vue";
 import { RouteName } from "../router";
@@ -309,6 +315,9 @@ import { RouteName } from "../router";
 // Declare refs for swiper and typed
 const typed = ref<null | Typed>(null);
 let swiper: null | Swiper = null;
+
+// Declare ref for loading state
+const isLoading = ref(true);
 
 // On mounted, initialize typed and swiper
 onMounted(() => {
