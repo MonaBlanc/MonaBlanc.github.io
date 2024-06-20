@@ -35,66 +35,10 @@
         </div>
 
         <div class="skill-card">
-          <div class="card">
-            <i class="fa-solid fa-note-sticky"></i>
-            <h4>
-              Front-End
-              <br />
-              Development
-            </h4>
-            <p>
-              I learnt to use HTML, CSS and Tailwind/Bootstrap in order to realize this website or personnal projects. I
-              also know how to use React and NodeJS.
-            </p>
-          </div>
-
-          <div class="card">
-            <i class="fa-solid fa-file-code"></i>
-            <h4>
-              Back-End
-              <br />
-              Development
-            </h4>
-            <p>
-              I acquired knowledge in SQL and NO-SQL databases during my cursus at school, I can also use Express and
-              manage REST APIs in a MERN structure. I was also able to use .NET and MVC Model at Faurecia.
-            </p>
-          </div>
-
-          <div class="card">
-            <i class="fa-solid fa-terminal"></i>
-            <h4>Software Development</h4>
-            <p>
-              I learned multiple languages during my scholarity, as you will see on my projects, such as : C#, C++ (and
-              C), Python and Java.
-            </p>
-          </div>
-
-          <div class="card">
-            <i class="fa-solid fa-microchip"></i>
-            <h4>Electronics</h4>
-            <p>
-              I learnt to program a STM32 ship and it was part of an important project in school, but I can also use
-              Arduino and Eagle softwares.
-            </p>
-          </div>
-
-          <div class="card">
-            <i class="fa-solid fa-cube"></i>
-            <h4>Unity Engine</h4>
-            <p>
-              Unity is my main software at work, we use it in order to manipulate 3D models on real-time and create CAD
-              softwares in VR.
-            </p>
-          </div>
-
-          <div class="card">
-            <i class="fa-solid fa-code-branch"></i>
-            <h4>GitHub</h4>
-            <p>
-              I use Git and GitHub a lot : school, work, personnal projects. It is a really useful tool that I am glad
-              to know. I use it as a DevOps tool when it's not Azure DevOps.
-            </p>
+          <div :key="skill.title" class="card" v-for="skill in skills">
+            <i :class="skill.icon"></i>
+            <h4>{{ skill.title }}</h4>
+            <p>{{ skill.description }}</p>
           </div>
         </div>
       </div>
@@ -242,12 +186,14 @@ import { RouterLink } from "vue-router";
 import educationsJson from "../assets/data/education.json";
 import experiencesJson from "../assets/data/experiences.json";
 import projectsJson from "../assets/data/projects.json";
+import skillsJson from "../assets/data/skills.json";
 import NavBar from "../components/NavBar.vue";
 import { RouteName } from "../router";
 
 const experiences = ref(experiencesJson);
 const educations = ref(educationsJson);
 const projects = ref(projectsJson);
+const skills = ref(skillsJson);
 
 // Declare refs for swiper and typed
 const typed = ref<null | Typed>(null);
