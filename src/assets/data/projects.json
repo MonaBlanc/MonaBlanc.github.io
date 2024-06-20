@@ -2,25 +2,25 @@
     {
       "id": 1,
       "name": "Chefbot",
-      "image": "ChefBotPlus.png",
+      "image": "../images/ChefBotPlus.png",
       "stack": ["React", "NodeJS", "API", "Express", "MongoDB"]
     },
     {
       "id": 2,
       "name": "Blackjack",
-      "image": "BlackjackSquare.png",
+      "image": "../images/BlackjackSquare.png",
       "stack": ["Python"]
     },
     {
       "id": 3,
       "name": "Flashcards",
-      "image": "FlashCards.png",
+      "image": "../images/FlashCards.png",
       "stack": ["Python", "Tkinter", "Pandas"]
     },
     {
       "id": 4,
       "name": "GunplaEshop",
-      "image": "GunplaEshop.png",
+      "image": "../images/GunplaEshop.png",
       "stack": ["React", "Tailwind CSS", "SpringBoot", "Java", "H2"]
     }
   ]
