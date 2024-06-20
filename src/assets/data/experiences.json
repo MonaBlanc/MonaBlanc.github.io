@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "company": "Intech - IT Consultant Firm",
+        "position": "Full-Stack Engineer",
+        "period": "Mar. 2024 - Aug. 2024",
+        "tasks": [
+            "Worked on the Toolbox project to create a standardized development environment and provide tools to facilitate developers work on external projects API",
+            "Developed mock services using SpringBoot and H2 to imitate real service behavior, enabling developers to test their code more easily and quickly",
+            "Implemented front-end design using Vue.js with TypeScript, focusing on responsiveness and user experience",
+            "Utilized Ansible, GitLab, and Docker for deployment and automation, streamlining the development process and improving efficiency"
+        ]
+    },
+    {
+        "id": 2,
+        "company": "FAURECIA",
+        "position": "Serious Game Developer",
+        "period": "Sep. 2021 - Mar. 2024",
+        "tasks": [
+            "Developed full-stack web applications using ASP.Net, PostgreSQL, IIS, and WebGL",
+            "Virtual Reality Development for many applications using C# (Unity)",
+            "Project Management using AzureDevOps tools (Repos, Boards, Pipelines)",
+            "Demonstrated strong problem-solving skills and product innovation abilities",
+            "Utilized English language skills for effective communication and collaboration",
+            "Implemented web application deployment and pipelines using Docker and SonarQube"
+        ]
+    },
+    {
+        "id": 3,
+        "company": "DELCOS",
+        "position": "Telecom technician",
+        "period": "2019-2021",
+        "tasks": [
+            "RJ45 Network Setup",
+            "FTTH installation"
+        ]
+    }
+]

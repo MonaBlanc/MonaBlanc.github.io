@@ -134,45 +134,22 @@
           <p style="color: var(--main-color); text-align: center">A little details about my professional experiences</p>
         </div>
         <ul class="timeline">
-          <li>
+          <li :key="experience.id" v-for="(experience, index) in experiences">
             <div class="timeline-badge">
               <span class="bi-briefcase-fill"></span>
             </div>
-            <div class="timeline-panel-container">
+            <div :class="index % 2 === 0 ? 'timeline-panel-container' : 'timeline-panel-container-inverted'">
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <h3>FAURECIA</h3>
-                  <h4>Serious Game Developper Apprentice</h4>
+                  <h3>{{ experience.company }}</h3>
+                  <h4>{{ experience.position }}</h4>
                   <p class="text-muted">
                     <span class="bi-clock-fill" style="color: var(--main-color)"></span>
-                    2021-Now
+                    {{ experience.period }}
                   </p>
                 </div>
                 <div class="timeline-body">
-                  <p>Unity and Web Development</p>
-                  <p>xR Platform team</p>
-                  <p>Visual Studio and C#</p>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="timeline-badge">
-              <span class="bi-briefcase-fill"></span>
-            </div>
-            <div class="timeline-panel-container-inverted">
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h3>DELCOS</h3>
-                  <h4>Telecom technician</h4>
-                  <p class="text-muted">
-                    <span class="bi-clock-fill" style="color: var(--main-color)"></span>
-                    2019-2021
-                  </p>
-                </div>
-                <div class="timeline-body">
-                  <p>RJ45 Network Setup</p>
-                  <p>FTTH installation</p>
+                  <p :key="task" v-for="task in experience.tasks">{{ task }}</p>
                 </div>
               </div>
             </div>
@@ -277,9 +254,12 @@ import Typed from "typed.js";
 import { onMounted, ref } from "vue";
 import { RouterLink } from "vue-router";
 
+import experiencesJson from "../assets/data/experiences.json";
 import projectsJson from "../assets/data/projects.json";
 import NavBar from "../components/NavBar.vue";
 import { RouteName } from "../router";
+
+const experiences = ref(experiencesJson);
 
 const projects = ref(projectsJson);
 
