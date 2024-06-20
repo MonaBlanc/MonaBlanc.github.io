@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "name": "Chefbot",
+      "image": "ChefBotPlus.png",
+      "stack": ["React", "NodeJS", "API", "Express", "MongoDB"]
+    },
+    {
+      "id": 2,
+      "name": "Blackjack",
+      "image": "BlackjackSquare.png",
+      "stack": ["Python"]
+    },
+    {
+      "id": 3,
+      "name": "Flashcards",
+      "image": "FlashCards.png",
+      "stack": ["Python", "Tkinter", "Pandas"]
+    },
+    {
+      "id": 4,
+      "name": "GunplaEshop",
+      "image": "GunplaEshop.png",
+      "stack": ["React", "Tailwind CSS", "SpringBoot", "Java", "H2"]
+    }
+  ]

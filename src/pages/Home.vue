@@ -110,35 +110,12 @@
         </div>
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="/src/assets/images/ChefBotPlus.png" />
-              <h2>Chefbot</h2>
-              <a href="projects.html"><span class="tag">#React</span></a>
-              <a href="projects.html"><span class="tag">#NodeJS</span></a>
-              <a href="projects.html"><span class="tag">#API</span></a>
-              <a href="projects.html"><span class="tag">#Express</span></a>
-              <a href="projects.html"><span class="tag">#MongoDB</span></a>
-            </div>
-            <div class="swiper-slide">
-              <img src="/src/assets/images/BlackjackSquare.png" />
-              <h2>Blackjack</h2>
-              <a href="#"><span class="tag">#Python</span></a>
-            </div>
-            <div class="swiper-slide">
-              <img src="/src/assets/images/FlashCards.png" />
-              <h2>Flashcards</h2>
-              <a href="projects.html"><span class="tag">#Python</span></a>
-              <a href="projects.html"><span class="tag">#Tkinter</span></a>
-              <a href="projects.html"><span class="tag">#Pandas</span></a>
-            </div>
-            <div class="swiper-slide">
-              <img src="/src/assets/images/GunplaEshop.png" />
-              <h2>GunplaEshop</h2>
-              <a href="projects.html"><span class="tag">#React</span></a>
-              <a href="projects.html"><span class="tag">#Tailwind CSS</span></a>
-              <a href="projects.html"><span class="tag">#SpringBoot</span></a>
-              <a href="projects.html"><span class="tag">#Java</span></a>
-              <a href="projects.html"><span class="tag">#H2</span></a>
+            <div :key="project.id" class="swiper-slide" v-for="project in projects">
+              <img :src="'/src/assets/images/' + project.image" />
+              <h2>{{ project.name }}</h2>
+              <a :href="'projects.html?tag=' + stack" :key="stack" v-for="stack in project.stack">
+                <span class="tag">#{{ stack }}</span>
+              </a>
             </div>
           </div>
           <div class="swiper-button-next"></div>
@@ -300,8 +277,11 @@ import Typed from "typed.js";
 import { onMounted, ref } from "vue";
 import { RouterLink } from "vue-router";
 
+import projectsJson from "../assets/data/projects.json";
 import NavBar from "../components/NavBar.vue";
 import { RouteName } from "../router";
+
+const projects = ref(projectsJson);
 
 // Declare refs for swiper and typed
 const typed = ref<null | Typed>(null);
