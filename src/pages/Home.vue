@@ -167,29 +167,14 @@
           <p style="color: var(--main-color); text-align: center">School and licenses</p>
         </div>
         <div class="row">
-          <div class="col-sm-6">
+          <div :key="education.period" class="col-sm-6" v-for="education in educations">
             <div class="education-block">
-              <h5>2019-2021</h5>
+              <h5>{{ education.period }}</h5>
               <span class="bi bi-mortarboard" style="font-size: 40px; color: var(--main-color)"></span>
-              <h3>University Institute of Technology</h3>
-              <h4>Two-year university degree in technology (GEII)</h4>
+              <h3>{{ education.institution }}</h3>
+              <h4>{{ education.degree }}</h4>
               <div class="red-divider"></div>
-              <p>Electricity, Electronics, Engineering science</p>
-              <p>Industrial Computing, Robotics, Automatism</p>
-              <p>Embedded Systems, C and C++ languages</p>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="education-block">
-              <h5>2021-2024 (In Progress...)</h5>
-              <span class="bi bi-mortarboard" style="font-size: 40px; color: var(--main-color)"></span>
-              <h3>Polytech Nancy</h3>
-              <h4>IA2R Cursus</h4>
-              <h5>Engineer degree</h5>
-              <div class="red-divider"></div>
-              <p>Computer Science, Network, Robotics and Automatism</p>
-              <p>Apprenticeship as a developer</p>
-              <p>C#, Java, Web</p>
+              <p :key="detail" v-for="detail in education.details">{{ detail }}</p>
             </div>
           </div>
         </div>
@@ -254,13 +239,14 @@ import Typed from "typed.js";
 import { onMounted, ref } from "vue";
 import { RouterLink } from "vue-router";
 
+import educationsJson from "../assets/data/education.json";
 import experiencesJson from "../assets/data/experiences.json";
 import projectsJson from "../assets/data/projects.json";
 import NavBar from "../components/NavBar.vue";
 import { RouteName } from "../router";
 
 const experiences = ref(experiencesJson);
-
+const educations = ref(educationsJson);
 const projects = ref(projectsJson);
 
 // Declare refs for swiper and typed

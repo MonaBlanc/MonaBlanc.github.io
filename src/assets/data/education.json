@@ -1,0 +1,22 @@
+[
+    {
+      "period": "2019-2021",
+      "institution": "University Institute of Technology",
+      "degree": "Two-year university degree in technology (GEII)",
+      "details": [
+        "Electricity, Electronics, Engineering science",
+        "Industrial Computing, Robotics, Automatism",
+        "Embedded Systems, C and C++ languages"
+      ]
+    },
+    {
+      "period": "2021-2024 (In Progress...)",
+      "institution": "Polytech Nancy",
+      "degree": "IA2R Cursus - Engineer degree",
+      "details": [
+        "Computer Science, Network, Robotics and Automatism",
+        "Apprenticeship as a developer",
+        "C#, Java, Web"
+      ]
+    }
+  ]
