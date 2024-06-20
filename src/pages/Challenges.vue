@@ -20,61 +20,10 @@
 <script setup lang="ts">
 import type { Challenge } from "../types";
 
-import ChallengeItem from "./ChallengeItem.vue";
-const challenges: Challenge[] = [
-  {
-    caption: "Elles bougent",
-    description:
-      "Ecological school project with high school girls to raise awareness about water usage and optimize the structure of a school.",
-    image: "https://www.ellesbougent.com/documents/actualites/2381/image_innovatech-2.zoom.jpg",
-    medal: "https://img.icons8.com/emoji/512/2nd-place-medal-emoji.png",
-    name: "InnovaTech Hackathon",
-    organization: "Elles Bougent",
-  },
-  {
-    caption: "SheCodes",
-    description: "Homepage project on the theme of Japan for a website contest among developers.",
-    image:
-      "https://coursereport-s3-production.global.ssl.fastly.net/uploads/school/logo/633/original/SheCodes_logo_square_white_background.png",
-    medal: null,
-    name: "Dream Travel Destination",
-    organization: "SheCodes",
-  },
-  {
-    caption: "Polytech Nancy",
-    description: "Cybersecurity event with several challenges carried out in pairs organized by the Polytech network.",
-    image: "https://pbs.twimg.com/profile_images/1478391918920929281/klpZxcMf_400x400.jpg",
-    medal: "https://img.icons8.com/emoji/512/2nd-place-medal-emoji.png",
-    name: "Capture The Flag",
-    organization: "Polytech",
-  },
-  {
-    caption: "CHE",
-    description: "War game competition with several challenges in the field of cybersecurity.",
-    image: "https://polytech-nancy.univ-lorraine.fr/wp-content/uploads/LogoCHE2022petit2.jpg",
-    medal: "https://img.icons8.com/emoji/48/1st-place-medal-emoji.png",
-    name: "Cyber Humanum Est",
-    organization: "ComCyber",
-  },
-  {
-    caption: "100 Days of Code",
-    description: "100-day challenge during which projects are completed in various domains.",
-    image: "https://ironfocus.com/wp-content/uploads/2020/04/9-python.jpg",
-    medal: null,
-    name: "100 Days of Code",
-    organization: "Python",
-  },
-  {
-    caption: "CodinGame",
-    description:
-      "The hackathon and an online programming competition 'CodinGame Spring Challenge 2023'. Challenge between developers, to compete on algorithms and strategies!",
-    image: "https://meritis.fr/wp-content/uploads/2023/05/preview.jpg",
-    medal:
-      "https://png.pngtree.com/png-vector/20220808/ourmid/pngtree-bronze-award-icon-ranking-with-star-design-png-image_6100837.png",
-    name: "CodinGame Spring Challenge",
-    organization: "Python",
-  },
-];
+import challengesData from "../assets/data/challenges.json";
+import ChallengeItem from "../components/ChallengeItem.vue";
+
+const challenges: Challenge[] = challengesData;
 </script>
 
 <style lang="scss" scoped>
