@@ -3,7 +3,7 @@
     <!-- About section -->
     <section class="container-fluid" id="about">
       <div class="col-8 col-lg-4 avatar">
-        <img src="/src/assets/images/room_kim.png" />
+        <img alt="Room" src="/src/assets/images/room_kim.png" />
       </div>
       <div class="heading">
         <h1>
@@ -50,7 +50,7 @@
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <div :key="project.id" class="swiper-slide" v-for="project in projects">
-              <img :src="'/src/assets/images/' + project.image" />
+              <img :src="'/src/assets/images/' + project.image" alt="Project" />
               <h2>{{ project.name }}</h2>
               <a :href="'projects.html?tag=' + stack" :key="stack" v-for="stack in project.stack">
                 <span class="tag">#{{ stack }}</span>
@@ -270,7 +270,6 @@ onMounted(() => {
   display: inline-block;
   border-radius: 3px;
   padding: 0.2em 0.5em 0.3em;
-  border-radius: 5px;
   background: var(--third-color);
   color: var(--bg-color);
   font-weight: 600;
@@ -299,6 +298,6 @@ h1.tag {
 
 .swiper-pagination-bullet-active {
   opacity: var(--swiper-pagination-bullet-opacity, 1);
-  background: var(--swiper-pagination-color, var(--third-color));
+  background: var(--third-color);
 }
 </style>
