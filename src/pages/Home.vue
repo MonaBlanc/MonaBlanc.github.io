@@ -12,15 +12,15 @@
         </h1>
         <h3>Computer Engineering Apprentice</h3>
         <p>
-          I'm a 22 years old student at
+          I'm a 23 years old student at
           <a class="underline-hover-effect" href="https://polytech-nancy.univ-lorraine.fr/">Polytech Nancy</a>
           , an engineering school based in France.
           <br />
-          I study Computer Science and Robotics there in an apprenticeship formation. I had
+          I study Computer Science and Robotics there, in an apprenticeship formation. I had the
           <br />
-          the pleasure to start as a serious game developper and I am now looking for a new
+          pleasure to start as a serious game developper, then I went into web development, and I
           <br />
-          challenge in the field of web development.
+          am now looking for a new challenge in the field of web development, going abroad.
         </p>
         <a class="btn btn-outline-light" href="mailto:jacquemotkimberley@gmail.com">Contact me</a>
       </div>
@@ -250,8 +250,11 @@
       </div>
       <div class="container">
         <ul>
-          <div class="row">
-            <div class="col">
+          <div class="row" style="display: flex; justify-content: center; text-align: center">
+            <div
+              class="col"
+              style="display: flex; flex-direction: column; justify-content: center; align-items: center"
+            >
               <li style="--color: var(--second-color)">
                 <router-link :to="RouteName.Challenges" class="base"></router-link>
                 <span class="title">Challenges</span>
@@ -260,16 +263,10 @@
                 </span>
               </li>
             </div>
-            <div class="col">
-              <li style="--color: var(--third-color)">
-                <router-link :to="RouteName.Certifications" class="base"></router-link>
-                <span class="title">Certifications</span>
-                <span class="icon">
-                  <i class="bi bi-award-fill"></i>
-                </span>
-              </li>
-            </div>
-            <div class="col">
+            <div
+              class="col"
+              style="display: flex; flex-direction: column; justify-content: center; align-items: center"
+            >
               <li style="--color: #64ffda">
                 <router-link :to="RouteName.Projects" class="base"></router-link>
                 <span class="title">Projects</span>

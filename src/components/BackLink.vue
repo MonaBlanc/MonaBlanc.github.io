@@ -1,7 +1,7 @@
 <template>
   <div class="tree">
     <router-link :to="RouteName.Home" class="underline-hover-effect" v-if="$route.name !== 'Home'">
-      Retour à l'accueil
+      Back to Home
     </router-link>
   </div>
 </template>
