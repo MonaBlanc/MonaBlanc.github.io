@@ -7,22 +7,17 @@
       </div>
       <div class="heading">
         <h1>
-          hi, i'm
+          {{ t("about.hi") }}
           <span class="auto-type"></span>
         </h1>
-        <h3>Computer Engineering Apprentice</h3>
+        <h3>{{ t("about.title") }}</h3>
         <p>
-          I'm a 23 years old student at
-          <a class="underline-hover-effect" href="https://polytech-nancy.univ-lorraine.fr/">Polytech Nancy</a>
-          , an engineering school based in France.
-          <br />
-          I study Computer Science and Robotics there, in an apprenticeship formation. I had the
-          <br />
-          pleasure to start as a serious game developper, then I went into web development, and I
-          <br />
-          am now looking for a new challenge in the field of web development, going abroad.
+          {{ t("about.description1") }}
+          <a :href="t('about.schoolUrl')" class="underline-hover-effect">{{ t("about.schoolName") }}</a>
+          ,
+          {{ t("about.description2") }}
         </p>
-        <a class="btn btn-outline-light" href="mailto:jacquemotkimberley@gmail.com">Contact me</a>
+        <a class="btn btn-outline-light" href="mailto:jacquemotkimberley@gmail.com">{{ t("about.contact") }}</a>
       </div>
     </section>
 
@@ -181,6 +176,7 @@
 import Swiper from "swiper";
 import Typed from "typed.js";
 import { onMounted, ref } from "vue";
+import { useI18n } from "vue-i18n";
 import { RouterLink } from "vue-router";
 
 import educationsJson from "../assets/data/education.json";
@@ -194,6 +190,7 @@ const experiences = ref(experiencesJson);
 const educations = ref(educationsJson);
 const projects = ref(projectsJson);
 const skills = ref(skillsJson);
+const { t } = useI18n();
 
 // Declare refs for swiper and typed
 const typed = ref<null | Typed>(null);
@@ -205,7 +202,7 @@ onMounted(() => {
   typed.value = new Typed(".auto-type", {
     backSpeed: 150,
     loop: true,
-    strings: ["kimberley :)", "coding ;)", "sleeping zZz"],
+    strings: [t("strings[0]"), t("strings[1]"), t("strings[2]")],
     typeSpeed: 150,
   });
 
@@ -237,6 +234,13 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
+#about p {
+  white-space: pre-wrap;
+  text-align: center;
+  max-width: 800px;
+  margin: 20px auto; /* Add more margin on the y-axis */
+}
+
 .swiper {
   width: 60%;
   height: auto;
