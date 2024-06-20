@@ -1,32 +1,32 @@
 [
     {
-      "icon": "fa-solid fa-note-sticky",
-      "title": "Front-End Development",
-      "description": "I learnt to use HTML, CSS and Tailwind/Bootstrap in order to realize this website or personal projects. I also know how to use React and NodeJS."
+        "icon": "fa-solid fa-laptop-code",
+        "title": "Languages",
+        "description": "I am proficient in several programming languages including Java, TypeScript, HTML, CSS, SQL, and C#."
     },
     {
-      "icon": "fa-solid fa-file-code",
-      "title": "Back-End Development",
-      "description": "I acquired knowledge in SQL and NO-SQL databases during my cursus at school, I can also use Express and manage REST APIs in a MERN structure. I was also able to use .NET and MVC Model at Faurecia."
+        "icon": "fa-solid fa-cubes",
+        "title": "Frameworks",
+        "description": "I have experience working with various frameworks such as Unity, Vue.ts, ASP.Net, .NET, SpringBoot, Express, Next, React, Node.js, MongoDB, and PostGreSQL."
     },
     {
-      "icon": "fa-solid fa-terminal",
-      "title": "Software Development",
-      "description": "I learned multiple languages during my scholarity, as you will see on my projects, such as : C#, C++ (and C), Python and Java."
+        "icon": "fa-solid fa-tools",
+        "title": "Developer Tools",
+        "description": "I am familiar with a range of developer tools including Git, Docker, AzureDevOps, Maven/Gradle, SonarQube, Visual Studio Code, and Figma."
     },
     {
-      "icon": "fa-solid fa-microchip",
-      "title": "Electronics",
-      "description": "I learnt to program a STM32 ship and it was part of an important project in school, but I can also use Arduino and Eagle softwares."
+        "icon": "fa-solid fa-book",
+        "title": "Libraries",
+        "description": "I have used several libraries in my projects, such as SCSS, Tailwind CSS, Redux, and Pinia."
     },
     {
-      "icon": "fa-solid fa-cube",
-      "title": "Unity Engine",
-      "description": "Unity is my main software at work, we use it in order to manipulate 3D models on real-time and create CAD softwares in VR."
+        "icon": "fa-solid fa-microchip",
+        "title": "Electronics",
+        "description": "During my studies, I learned to program a STM32 ship and it was part of an important project. I can also use Arduino and Eagle softwares."
     },
     {
-      "icon": "fa-solid fa-code-branch",
-      "title": "GitHub",
-      "description": "I use Git and GitHub a lot : school, work, personal projects. It is a really useful tool that I am glad to know. I use it as a DevOps tool when it's not Azure DevOps."
+        "icon": "fa-brands fa-docker",
+        "title": "DevOps",
+        "description": "I have utilized Ansible, GitLab, and Docker for deployment and automation, which streamlined the development process and improved efficiency. These tools are integral to my work, and I use them extensively for school, work, and personal projects."
     }
-  ]
+]
