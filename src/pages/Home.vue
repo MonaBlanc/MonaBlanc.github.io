@@ -31,7 +31,7 @@
 
         <div class="skill-card">
           <div :key="skill.title" class="card" v-for="skill in skills">
-            <i :class="skill.icon"></i>
+            <i :class="skill.icon" style="font-size: 36px"></i>
             <h4>{{ skill.title }}</h4>
             <p>{{ skill.description }}</p>
           </div>
