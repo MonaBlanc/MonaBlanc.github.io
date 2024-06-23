@@ -195,6 +195,7 @@ a:hover {
   padding-bottom: 0.15rem;
   position: relative;
   color: var(--bg-color);
+  text-decoration: none;
 }
 
 .underline-hover-effect::before {
@@ -206,6 +207,7 @@ a:hover {
   height: 2px;
   background-color: var(--bg-color);
   transition: width 0.25s ease-out;
+  text-decoration: none;
 }
 .underline-hover-effect:hover::before {
   width: 100%;
