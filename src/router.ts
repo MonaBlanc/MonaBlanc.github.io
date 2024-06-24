@@ -32,7 +32,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Projects,
     name: "Projects",
     path: `${RouteName.Projects}`,
-    props: true,
+    props: (route) => ({ tags: route.query.tags }),
   },
 ];
 

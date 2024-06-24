@@ -17,7 +17,7 @@
       <div class="col">
         <div :id="project.id" class="img-container">
           <p @click="showDialog(project.id)">&gt; Click here ! &lt;</p>
-          <img :alt="project.name" :src="'/src/assets/images/' + project.image" class="img-fluid" />
+          <img :alt="project.name" :src="'/dist/assets/images/' + project.image" class="img-fluid" />
         </div>
       </div>
     </div>
@@ -99,12 +99,9 @@ onMounted(async () => {
 });
 
 function handleProjectId(id: string | string[]): string {
-  // Vérifiez si 'id' est un tableau
   if (Array.isArray(id)) {
-    // Utilisez le premier élément du tableau ou gérez-le comme nécessaire
-    return id[0]; // ou une autre logique pour choisir un id approprié
+    return id[0];
   }
-  // Si 'id' est déjà un string, retournez-le directement
   return id;
 }
 const projectIdString = handleProjectId(projectId);
