@@ -2,7 +2,7 @@
     {
       "id": 1,
       "name": "Chefbot",
-      "image": "ChefBotPlus.png",
+      "image": "../assets/images/ChefBotPlus.png",
       "stack": ["React", "NodeJS", "API", "Express", "MongoDB"],
       "description": "Chefbot helps you choose what to eat depending on your diet and even helps you make your grocery list!",
       "github": "https://github.com/MonaBlanc/ChatBot/blob/master/README.md",
@@ -12,7 +12,7 @@
     {
       "id": 2,
       "name": "Blackjack",
-      "image": "BlackjackSquare.png",
+      "image": "../assets/images/BlackjackSquare.png",
       "stack": ["Python"],
       "description": "The Blackjack Python Console Game is a text-based implementation of the popular casino card game, Blackjack. It allows players to play against a computer dealer and experience the excitement of trying to beat the house.",
       "github": "https://github.com/MonaBlanc/100DaysOfCode/tree/main/Day%2011%20-%20Blackjack",
@@ -22,7 +22,7 @@
     {
       "id": 3,
       "name": "Flashcards",
-      "image": "FlashCards.png",
+      "image": "../assets/images/FlashCards.png",
       "stack": ["Python", "Tkinter", "Pandas"],
       "description": "Made a python application to help me while learning Japanese words and did it with Flaschards system where as long as you don't get the word, you will have to train for it.",
       "github": "https://github.com/MonaBlanc/100DaysOfCode/tree/main/Day%2031%20-%20Flash%20Cards%20App",
@@ -33,7 +33,7 @@
     {
       "id": 4,
       "name": "GunplaEshop",
-      "image": "GunplaEshop.png",
+      "image": "../assets/images/GunplaEshop.png",
       "stack": ["React", "Tailwind CSS", "SpringBoot", "Java", "H2"],
       "description": "Gunpla Eshop is an e-commerce platform specifically designed for Gundam plastic model (Gunpla) enthusiasts.",
       "github": "https://github.com/MonaBlanc/GunplaShop-frontend/blob/master/README.md",
