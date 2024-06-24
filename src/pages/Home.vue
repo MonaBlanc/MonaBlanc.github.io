@@ -54,9 +54,7 @@
                 <img :src="'/src/assets/images/' + project.image" alt="Project" />
               </router-link>
               <h2>{{ project.name }}</h2>
-              <a :href="'projects.html?tag=' + stack" :key="stack" v-for="stack in project.stack">
-                <span class="tag">#{{ stack }}</span>
-              </a>
+              <span :key="stack" class="tag" v-for="stack in project.stack">#{{ stack }}</span>
             </div>
           </div>
           <div class="swiper-button-next"></div>
