@@ -194,13 +194,13 @@ const projects = ref(projectsJson);
 const skills = ref(skillsJson);
 const { t } = useI18n();
 
-// Declare refs for swiper and typed
+// Déclaration des refs pour swiper et typed
 const typed = ref<null | Typed>(null);
 let swiper: null | Swiper = null;
 
-// On mounted, initialize typed and swiper
+// À l'initialisation, configurez typed et swiper
 onMounted(() => {
-  // Initialize Typed.js
+  // Initialisation de Typed.js
   typed.value = new Typed(".auto-type", {
     backSpeed: 150,
     loop: true,
@@ -208,7 +208,7 @@ onMounted(() => {
     typeSpeed: 150,
   });
 
-  // Initialize Swiper
+  // Initialisation de Swiper
   swiper = new Swiper(".mySwiper", {
     effect: "flip",
     grabCursor: true,
@@ -221,13 +221,12 @@ onMounted(() => {
     },
   });
 
-  // Handle click event on next button
+  // Gestion des événements de clic sur les boutons suivant et précédent
   const nextButton = document.querySelector(".swiper-button-next");
   nextButton?.addEventListener("click", () => {
     swiper?.slideNext();
   });
 
-  // Handle click event on previous button
   const prevButton = document.querySelector(".swiper-button-prev");
   prevButton?.addEventListener("click", () => {
     swiper?.slidePrev();
@@ -240,7 +239,7 @@ onMounted(() => {
   white-space: pre-wrap;
   text-align: center;
   max-width: 800px;
-  margin: 20px auto; /* Add more margin on the y-axis */
+  margin: 20px auto;
 }
 
 .swiper {

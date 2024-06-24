@@ -16,5 +16,6 @@ export interface Project {
   link: string;
   name: string;
   stack: string[];
+  tags: string[];
   year: string;
 }

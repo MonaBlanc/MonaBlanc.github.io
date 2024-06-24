@@ -1,17 +1,23 @@
 <template>
   <h1>Projects</h1>
   <section id="selection">
-    <span @click="filterProjects('all')" class="tag">All</span>
-    <span @click="filterProjects('front')" class="tag">Front-End</span>
-    <span @click="filterProjects('back')" class="tag">Back-End</span>
-    <span @click="filterProjects('software')" class="tag">Software</span>
+    <span :class="{ selected: filterTag === 'all' }" @click="filterProjects('all')" class="tag">All</span>
+    <span :class="{ selected: filterTag === 'Web Development' }" @click="filterProjects('Web Development')" class="tag">
+      Web Development
+    </span>
+    <span :class="{ selected: filterTag === 'Full Stack' }" @click="filterProjects('Full Stack')" class="tag">
+      Full Stack
+    </span>
+    <span :class="{ selected: filterTag === 'Software' }" @click="filterProjects('Software')" class="tag">
+      Software
+    </span>
   </section>
   <section class="container" id="projectList">
     <div :key="project.id" class="row" v-for="project in filteredProjects">
       <div class="col">
         <div :id="project.id" class="img-container">
           <p @click="showDialog(project.id)">&gt; Click here ! &lt;</p>
-          <img :src="'/src/assets/images/' + project.image" alt="Project Image" class="img-fluid" />
+          <img :alt="project.name" :src="'/src/assets/images/' + project.image" class="img-fluid" />
         </div>
       </div>
     </div>
@@ -22,14 +28,23 @@
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="projectModalLabel">{{ selectedProject?.name }}</h5>
-          <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+          <h5 :title="selectedProject?.name" class="modal-title" id="projectModalLabel">{{ selectedProject?.name }}</h5>
+          <button
+            :aria-label="`Close ${selectedProject?.name}`"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            type="button"
+          ></button>
         </div>
         <div class="modal-body">
           <div class="row">
             <div class="col-md-6">
               <a :href="selectedProject?.link" target="_blank">
-                <img :src="'/src/assets/images/' + selectedProject?.image" alt="Project Image" class="img-fluid" />
+                <img
+                  :alt="selectedProject?.name"
+                  :src="'/src/assets/images/' + selectedProject?.image"
+                  class="img-fluid"
+                />
               </a>
             </div>
             <div class="col-md-6">
@@ -46,95 +61,86 @@
     </div>
   </div>
 </template>
-
 <script setup lang="ts">
 import { Modal } from "bootstrap";
-import { computed, ref } from "vue";
+import { computed, onMounted, ref } from "vue";
+import { useRoute } from "vue-router";
 
 import type { Project } from "../types";
 
-const projects: Project[] = [
-  {
-    category: "front",
-    description:
-      "Gunpla Eshop is an e-commerce platform specifically designed for Gundam plastic model (Gunpla) enthusiasts.",
-    id: "GunplaEshop",
-    image: "GunplaEshop.png",
-    isVisible: true,
-    link: "https://github.com/MonaBlanc/GunplaShop-frontend/blob/master/README.md",
-    name: "GunplaEshop",
-    stack: ["React", "Tailwind CSS", "H2", "Spring Boot"],
-    year: "2023",
-  },
-  {
-    category: "back",
-    description:
-      "Chefbot helps you choose what to eat depending on your diet and even helps you make your grocery list!",
-    id: "ChefBot",
-    image: "ChefBotPlus.png",
-    isVisible: true,
-    link: "https://github.com/MonaBlanc/ChatBot/blob/master/README.md",
-    name: "Chefbot",
-    stack: ["React", "Node.js", "Express", "MongoDB"],
-    year: "2022-2023",
-  },
-  {
-    category: "software",
-    description:
-      "The Blackjack Python Console Game is a text-based implementation of the popular casino card game, Blackjack. It allows players to play against a computer dealer and experience the excitement of trying to beat the house.",
-    id: "BlackJack",
-    image: "BlackjackSquare.png",
-    isVisible: true,
-    link: "https://github.com/MonaBlanc/100DaysOfCode/tree/main/Day%2011%20-%20Blackjack",
-    name: "BlackJack",
-    stack: ["Python"],
-    year: "2023",
-  },
-  {
-    category: "software",
-    description:
-      "Made a python application to help me while learning Japanese words and did it with Flaschards system where as long as you don't get the word, you will have to train for it.",
-    id: "FlashCards",
-    image: "FlashCards.png",
-    isVisible: true,
-    link: "https://github.com/MonaBlanc/100DaysOfCode/tree/main/Day%2031%20-%20Flash%20Cards%20App",
-    name: "Flashcards",
-    stack: ["Python", "Pandas", "Tkinter"],
-    year: "2023",
-  },
-];
+const route = useRoute();
+const projectId: string | string[] = route.params.id;
 
-const filterTag = ref("all");
+const projects = ref<Project[]>([]);
 const selectedProject = ref<null | Project>(null);
+const filterTag = ref("all");
+
+// Charger les projets depuis un fichier JSON au montage du composant
+onMounted(async () => {
+  try {
+    const response = await fetch("/src/assets/data/projects.json");
+    if (!response.ok) {
+      throw new Error(`Échec du chargement des projets: ${response.statusText}`);
+    }
+    const contentType = response.headers.get("Content-Type");
+    if (!contentType || !contentType.includes("application/json")) {
+      throw new Error("La réponse obtenue n'est pas du JSON");
+    }
+    const data = await response.json();
+    projects.value = data;
+  } catch (error) {
+    console.error("Erreur lors du chargement des projets:", error);
+  }
+
+  // Afficher le dialogue du projet si un ID est présent
+  if (projectIdString) {
+    showDialog(projectIdString);
+  }
+});
+
+function handleProjectId(id: string | string[]): string {
+  // Vérifiez si 'id' est un tableau
+  if (Array.isArray(id)) {
+    // Utilisez le premier élément du tableau ou gérez-le comme nécessaire
+    return id[0]; // ou une autre logique pour choisir un id approprié
+  }
+  // Si 'id' est déjà un string, retournez-le directement
+  return id;
+}
+const projectIdString = handleProjectId(projectId);
 
 const filteredProjects = computed(() => {
-  return projects.filter((project) => {
+  return projects.value.filter((project: Project) => {
     if (filterTag.value === "all") {
       return true;
-    } else if (filterTag.value === "front") {
-      return project.category === "front";
-    } else if (filterTag.value === "back") {
-      return project.category === "back";
-    } else if (filterTag.value === "software") {
-      return project.category === "software";
+    } else {
+      return project.category && Array.isArray(project.category) && project.category.includes(filterTag.value);
     }
   });
 });
 
-function showDialog(id: string): void {
-  const project = projects.find((p) => p.id === id);
-  if (project) {
-    selectedProject.value = project;
-    const modal = new Modal(document.getElementById("projectModal")!);
-    modal.show();
-  }
-}
-
 function filterProjects(tag: string): void {
   filterTag.value = tag;
 }
-</script>
 
+function showDialog(id: string): void {
+  // Convertir l'ID fourni en chaîne de caractères pour la comparaison
+  const projectId = id.toString();
+  const projectIndex = projects.value.findIndex((p: Project) => p.id.toString() === projectId);
+  if (projectIndex !== -1) {
+    selectedProject.value = projects.value[projectIndex];
+    const modalElement = document.getElementById("projectModal");
+    if (modalElement) {
+      const modal = new Modal(modalElement);
+      modal.show();
+    } else {
+      console.error("Élément modal introuvable.");
+    }
+  } else {
+    console.error("Aucun projet trouvé avec l'ID fourni:", id);
+  }
+}
+</script>
 <style scoped lang="scss">
 * {
   scroll-behavior: smooth;

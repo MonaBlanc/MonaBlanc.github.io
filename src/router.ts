@@ -24,8 +24,15 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     component: Projects,
+    name: "ProjectDetails",
+    path: `${RouteName.Projects}/:id`,
+    props: true,
+  },
+  {
+    component: Projects,
     name: "Projects",
     path: `${RouteName.Projects}`,
+    props: true,
   },
 ];
 
