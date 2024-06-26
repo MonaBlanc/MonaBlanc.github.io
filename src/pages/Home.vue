@@ -51,7 +51,7 @@
           <div class="swiper-wrapper">
             <div :key="project.id" class="swiper-slide" v-for="project in projects">
               <router-link :to="`/projects/${project.id}`">
-                <img :src="`${project.image}`" alt="Project" />
+                <img :src="`/assets/images/${project.image}`" alt="Project" />
               </router-link>
               <h2>{{ project.name }}</h2>
               <span :key="stack" class="tag" v-for="stack in project.stack">#{{ stack }}</span>
