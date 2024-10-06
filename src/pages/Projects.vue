@@ -17,7 +17,7 @@
       <div class="col">
         <div :id="project.id" class="img-container">
           <p @click="showDialog(project.id)">&gt; Click here ! &lt;</p>
-          <img :alt="project.name" :src="'/dist/assets/images/' + project.image" class="img-fluid" />
+          <img :alt="project.name" :src="getProjectImage(project.image)" class="img-fluid" />
         </div>
       </div>
     </div>
@@ -40,7 +40,7 @@
           <div class="row">
             <div class="col-md-6">
               <a :href="selectedProject?.link" target="_blank">
-                <img :alt="selectedProject?.name" :src="`${selectedProject?.image}`" class="img-fluid" />
+                <img :alt="selectedProject?.name" :src="getProjectImage(selectedProject?.image)" class="img-fluid" />
               </a>
             </div>
             <div class="col-md-6">
@@ -71,6 +71,11 @@ const projectId: string | string[] = route.params.id;
 const projects = ref<Project[]>([]);
 const selectedProject = ref<null | Project>(null);
 const filterTag = ref("all");
+
+// Function to load project images dynamically
+const getProjectImage = (imagePath: string | undefined) => {
+  return new URL(`../assets/images/${imagePath}`, import.meta.url).href;
+};
 
 // Charger les projets depuis un fichier JSON au montage du composant
 onMounted(async () => {
