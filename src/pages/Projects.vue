@@ -65,6 +65,8 @@ import { useRoute } from "vue-router";
 
 import type { Project } from "../types";
 
+import projectsJson from "../assets/data/projects.json";
+
 const route = useRoute();
 const projectId: string | string[] = route.params.id;
 
@@ -80,16 +82,9 @@ const getProjectImage = (imagePath: string | undefined) => {
 // Charger les projets depuis un fichier JSON au montage du composant
 onMounted(async () => {
   try {
-    const response = await fetch("/src/assets/data/projects.json");
-    if (!response.ok) {
-      throw new Error(`Échec du chargement des projets: ${response.statusText}`);
-    }
-    const contentType = response.headers.get("Content-Type");
-    if (!contentType || !contentType.includes("application/json")) {
-      throw new Error("La réponse obtenue n'est pas du JSON");
-    }
-    const data = await response.json();
+    const data = projectsJson;
     projects.value = data;
+    console.log("Projects loaded:", projects.value); // Debugging
   } catch (error) {
     console.error(error);
   }
@@ -125,9 +120,13 @@ function filterProjects(tag: string): void {
 function showDialog(id: string): void {
   // Convertir l'ID fourni en chaîne de caractères pour la comparaison
   const projectId = id.toString();
+  console.log("Searching for project with ID:", projectId); // Debugging
   const projectIndex = projects.value.findIndex((p: Project) => p.id.toString() === projectId);
+  console.log("Project index:", projectIndex); // Debugging
+  console.log("Projects:", projects.value); // Debugging
   if (projectIndex !== -1) {
     selectedProject.value = projects.value[projectIndex];
+    console.log("Selected project:", selectedProject.value); // Debugging
     const modalElement = document.getElementById("projectModal");
     if (modalElement) {
       const modal = new Modal(modalElement);

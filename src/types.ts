@@ -8,14 +8,14 @@ export interface Challenge {
 }
 
 export interface Project {
-  category: string;
+  category: string[];
   description: string;
   id: string;
   image: string;
-  isVisible: boolean;
+  isVisible?: boolean;
   link: string;
   name: string;
   stack: string[];
-  tags: string[];
+  tags?: string[];
   year: string;
 }
