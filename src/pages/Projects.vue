@@ -40,11 +40,7 @@
           <div class="row">
             <div class="col-md-6">
               <a :href="selectedProject?.link" target="_blank">
-                <img
-                  :alt="selectedProject?.name"
-                  :src="'/src/assets/images/' + selectedProject?.image"
-                  class="img-fluid"
-                />
+                <img :alt="selectedProject?.name" :src="`${selectedProject?.image}`" class="img-fluid" />
               </a>
             </div>
             <div class="col-md-6">
@@ -61,6 +57,7 @@
     </div>
   </div>
 </template>
+
 <script setup lang="ts">
 import { Modal } from "bootstrap";
 import { computed, onMounted, ref } from "vue";
@@ -89,7 +86,7 @@ onMounted(async () => {
     const data = await response.json();
     projects.value = data;
   } catch (error) {
-    console.error("Erreur lors du chargement des projets:", error);
+    console.error(error);
   }
 
   // Afficher le dialogue du projet si un ID est présent
@@ -138,6 +135,7 @@ function showDialog(id: string): void {
   }
 }
 </script>
+
 <style scoped lang="scss">
 * {
   scroll-behavior: smooth;
@@ -151,11 +149,9 @@ h1 {
 }
 
 #selection {
-  /* Center the tags in the section */
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Make the section take up the whole width of the page */
   width: 100%;
 }
 
@@ -207,8 +203,8 @@ h1 {
 }
 
 .modal-content {
-  background-color: var(--third-color); /* Your desired background color */
-  transition: background-color 0.3s ease; /* Smooth transition effect */
+  background-color: var(--third-color);
+  transition: background-color 0.3s ease;
 }
 
 @keyframes pop-dialog {

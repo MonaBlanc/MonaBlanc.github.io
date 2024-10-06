@@ -51,7 +51,7 @@
           <div class="swiper-wrapper">
             <div :key="project.id" class="swiper-slide" v-for="project in projects">
               <router-link :to="`/projects/${project.id}`">
-                <img :src="`${project.image}`" alt="Project" />
+                <img :src="getProjectImage(project.image)" alt="Project" />
               </router-link>
               <h2>{{ project.name }}</h2>
               <span :key="stack" class="tag" v-for="stack in project.stack">#{{ stack }}</span>
@@ -196,7 +196,11 @@ const { t } = useI18n();
 const typed = ref<null | Typed>(null);
 let swiper: null | Swiper = null;
 
-// À l'initialisation, configurez typed et swiper
+// Function to load project images dynamically
+const getProjectImage = (imagePath: string) => {
+  return new URL(`../assets/images/${imagePath}`, import.meta.url).href;
+};
+
 onMounted(() => {
   // Initialisation de Typed.js
   typed.value = new Typed(".auto-type", {
