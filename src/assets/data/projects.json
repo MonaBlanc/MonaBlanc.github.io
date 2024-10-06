@@ -1,6 +1,6 @@
 [
     {
-      "id": 1,
+      "id": "1",
       "name": "Chefbot",
       "image": "ChefBotPlus.png",
       "stack": ["React", "NodeJS", "API", "Express", "MongoDB"],
@@ -10,7 +10,7 @@
       "year": "2022-2023"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Blackjack",
       "image": "BlackjackSquare.png",
       "stack": ["Python"],
@@ -20,7 +20,7 @@
       "year": "2023"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Flashcards",
       "image": "FlashCards.png",
       "stack": ["Python", "Tkinter", "Pandas"],
@@ -31,7 +31,7 @@
     
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "GunplaEshop",
       "image": "GunplaEshop.png",
       "stack": ["React", "Tailwind CSS", "SpringBoot", "Java", "H2"],
