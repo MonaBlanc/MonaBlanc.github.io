@@ -19,9 +19,9 @@
 
 ## ᓚᘏᗢ Analysis
 
-[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-orange.svg)](https://sonarcloud.io/summary/new_code?id=MonaBlanc_MonaBlanc.github.io)
-
-[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=MonaBlanc_MonaBlanc.github.io)](https://sonarcloud.io/summary/new_code?id=MonaBlanc_MonaBlanc.github.io)
+| Quality Gate | Bugs | Vulnerabilities | Code Smells | Maintainability Rating |
+| :----------: | :--: | :-------------: | :---------: | :--------------------: |
+| [![Quality Gate](https://sonarcloud.io/api/project_badges/quality_gate?project=MonaBlanc_MonaBlanc.github.io)](https://sonarcloud.io/summary/new_code?id=MonaBlanc_MonaBlanc.github.io) | [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=MonaBlanc_MonaBlanc.github.io&metric=bugs)](https://sonarcloud.io/summary/new_code?id=MonaBlanc_MonaBlanc.github.io) | [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=MonaBlanc_MonaBlanc.github.io&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=MonaBlanc_MonaBlanc.github.io) | [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=MonaBlanc_MonaBlanc.github.io&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=MonaBlanc_MonaBlanc.github.io) | [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=MonaBlanc_MonaBlanc.github.io&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=MonaBlanc_MonaBlanc.github.io) |
 
 ## ᓚᘏᗢ Color Palette
 
