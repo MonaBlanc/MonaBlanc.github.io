@@ -19,8 +19,9 @@
 
 ## ᓚᘏᗢ Analysis
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=MonaBlanc_github.io&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=MonaBlanc_github.io)
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-orange.svg)](https://sonarcloud.io/summary/new_code?id=MonaBlanc_MonaBlanc.github.io)
 
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=MonaBlanc_MonaBlanc.github.io)](https://sonarcloud.io/summary/new_code?id=MonaBlanc_MonaBlanc.github.io)
 
 ## ᓚᘏᗢ Color Palette
 
