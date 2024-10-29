@@ -17,6 +17,11 @@
   I also want to find a way to load the model smoothly.
 </p>
 
+## ᓚᘏᗢ Analysis
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=MonaBlanc_github.io&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=MonaBlanc_github.io)
+
+
 ## ᓚᘏᗢ Color Palette
 
 | Color          | Hex                                                                |
