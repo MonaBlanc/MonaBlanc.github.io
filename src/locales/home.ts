@@ -2,13 +2,12 @@ export const messages = {
   en: {
     about: {
       contact: "Contact me",
-      description1: "I'm a 23 years old student at",
+      description1: "I'm a 24 years old engineer at",
       description2:
-        "an engineering school based in France. I study Computer Science and Robotics there, in an apprenticeship formation. I had the pleasure to start as a serious game developper, then I went into web development, and I am now looking for a new challenge in the field of web development, going abroad.",
+        "in the R&D Department based in Japan. I had the pleasure to start as a serious game developper, then I went into DevOps, and I am now looking for new challenges in the field of CI/CD.",
       hi: "hi, i'm",
-      schoolName: "Polytech Nancy",
-      schoolUrl: "https://polytech-nancy.univ-lorraine.fr/",
-      title: "Computer Engineering Apprentice",
+      schoolName: "Faurecia Clarion Electronics",
+      title: "Tools Engineer",
     },
     certifications: {
       title: "A little further?",
@@ -37,13 +36,12 @@ export const messages = {
   fr: {
     about: {
       contact: "Contactez-moi",
-      description1: "Je suis un étudiant de 23 ans à",
+      description1: "Je suis une ingénieure de 24 ans à",
       description2:
-        "une école d'ingénieurs basée en France. J'y étudie l'informatique et la robotique, dans une formation en apprentissage. J'ai eu le plaisir de commencer en tant que développeur de jeux sérieux, puis je me suis orienté vers le développement web, et je suis maintenant à la recherche d'un nouveau défi dans le domaine du développement web, à l'étranger.",
+        "dans le département R&D basée au Japon. J'ai eu le plaisir de commencer en tant que développeuse de serious games en VR avec Unity, puis je me suis orientée vers le développement opérationnel, et je suis maintenant à la recherche d'un nouveau défi dans le domaine du CI/CD.",
       hi: "salut, je suis",
-      schoolName: "Polytech Nancy",
-      schoolUrl: "https://polytech-nancy.univ-lorraine.fr/",
-      title: "Apprenti en ingénierie informatique",
+      schoolName: "Faurecia Clarion Electronics",
+      title: "Ingénieure DevOps",
     },
     certifications: {
       title: "Un peu plus loin ?",

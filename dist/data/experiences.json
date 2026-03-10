@@ -1,6 +1,19 @@
 [
-    {
+        {
         "id": 1,
+        "company": "Faurecia Clarion Electronics – R&D Department",
+        "position": "DevOps Engineer (VIE)",
+        "period": "Nov. 2024 - Oct. 2026",
+        "tasks": [
+            "Contributed to CI infrastructure maintenance and improvement using Jenkins and GitLab, supporting build pipelines and development workflows across multiple R&D teams.",
+            "Developed Python and Bash automation scripts to support repository migrations, user provisioning, and project configuration across internal development tools.",
+            "Configured static analysis and compliance tools to enforce automotive coding standards and improve software quality across development teams.",
+            "Configured monitoring dashboards and log aggregation using Prometheus, Grafana, and Loki to support observability of growing development infrastructure.",
+            "Presented tooling improvements and workflow updates to engineering teams, facilitating adoption and collaboration across multiple countries and plants."
+        ]
+    },
+    {
+        "id": 2,
         "company": "Intech - IT Consultant Firm",
         "position": "Full-Stack Engineer",
         "period": "Mar. 2024 - Aug. 2024",
@@ -12,7 +25,7 @@
         ]
     },
     {
-        "id": 2,
+        "id": 3,
         "company": "FAURECIA",
         "position": "Serious Game Developer",
         "period": "Sep. 2021 - Mar. 2024",
@@ -26,7 +39,7 @@
         ]
     },
     {
-        "id": 3,
+        "id": 4,
         "company": "DELCOS",
         "position": "Telecom technician",
         "period": "2019-2021",

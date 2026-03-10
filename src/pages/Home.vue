@@ -13,7 +13,7 @@
         <h3>{{ t("about.title") }}</h3>
         <p>
           {{ t("about.description1") }}
-          <a :href="t('about.schoolUrl')" class="underline-hover-effect">{{ t("about.schoolName") }}</a>
+          <a class="underline-hover-effect">{{ t("about.schoolName") }}</a>
           ,
           {{ t("about.description2") }}
         </p>
